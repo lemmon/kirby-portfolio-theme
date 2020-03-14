@@ -1,0 +1,12 @@
+bin
+kirby
+media
+site/accounts/*
+!site/accounts/index.html
+site/cache/*
+!site/cache/index.html
+site/sessions/*
+!site/sessions/index.html
+vendor
+composer.lock
+!index.html

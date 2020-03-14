@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/abrusco@0.9.0/css/abrusco.min.css">
+  <style>
+  .le__grid {
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+    grid-template-rows: auto auto auto;
+  }
+  .le__grid__main {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+  }
+  </style>
+</head>
+<body class="le__grid max80 mx p1 lh4">
+
+  <header>
+    <h1 class="p1"><a class="block fw700" href="{{ kirby.url }}">{{ site.title }}</a></h1>
+    <aside class="p1">
+      <p>Nulla nisl libero, tempor eu urna a, facilisis ornare nibh. Phasellus sed ante venenatis, convallis lectus in, tristique metus. Nulla ac tincidunt nibh, sed mattis felis.</p>
+    </aside>
+    <nav class="">
+      <ul class="p1">
+        {% for i in 1..9 %}
+        <li><a class="block ul:hover" href="work.html">Page #{{ i }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <main class="le__grid__main">
+
+    <div class="grid3">
+      {% for i in 1..20 %}
+      <article class="p1">
+        <svg class="block bg-black-05" viewBox="0 0 1 1"></svg>
+      </article>
+      {% endfor %}
+    </div>
+
+  </main>
+
+  <footer class="p1 col justify-end">
+    <p>&copy; {{ 'now' | date('Y') }} All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
