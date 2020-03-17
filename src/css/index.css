@@ -2,13 +2,44 @@
 @import '-copy';
 
 .body {
-  display: grid;
-  grid-template-columns: 3fr 10fr;
-  grid-template-rows: repeat(3, min-content);
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.main {
-  grid-column-start: 2;
-  grid-row-start: 1;
-  grid-row-end: span 3;
+@media (--view-sd) {
+
+  .body {
+    max-width: 42rem;
+  }
+
 }
+
+@media (--view-md) {
+
+  .body {
+    display: grid;
+    grid-template-columns: 18rem auto;
+    grid-template-rows: repeat(3, min-content);
+    max-width: 60rem;
+  }
+
+  .main {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+  }
+
+}
+
+@media (--view-ld) {
+
+  .body {
+    max-width: 80rem;
+  }
+
+}
+
+@custom-media --view-sd (min-width: 42rem);
+@custom-media --view-md (min-width: 60rem);
+@custom-media --view-ld (min-width: 80rem);

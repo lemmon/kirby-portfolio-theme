@@ -419,7 +419,7 @@ svg {
   }
 }
 
-@media (min-width: 32rem) {
+@media (min-width: 42rem) {
   .sd-al {
     text-align: left;
   }
@@ -463,7 +463,7 @@ svg {
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 60rem) {
   .md-al {
     text-align: left;
   }
@@ -507,7 +507,7 @@ svg {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 80rem) {
   .ld-al {
     text-align: left;
   }
@@ -1108,7 +1108,7 @@ svg {
   }
 }
 
-@media (min-width: 32rem) {
+@media (min-width: 42rem) {
   .sd-show {
     display: block;
   }
@@ -1249,7 +1249,7 @@ svg {
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 60rem) {
   .md-show {
     display: block;
   }
@@ -1390,7 +1390,7 @@ svg {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 80rem) {
   .ld-show {
     display: block;
   }
@@ -2061,7 +2061,7 @@ svg {
   margin-right: auto;
 }
 
-@media (min-width: 32rem) {
+@media (min-width: 42rem) {
   .sd-p0 {
     padding: 0;
   }
@@ -2240,7 +2240,7 @@ svg {
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 60rem) {
   .md-p0 {
     padding: 0;
   }
@@ -2419,7 +2419,7 @@ svg {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 80rem) {
   .ld-p0 {
     padding: 0;
   }
@@ -3568,19 +3568,19 @@ svg {
   }
 }
 
-@media (min-width: 32rem) {
+@media (min-width: 42rem) {
   .-view::before {
     content: "SD";
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 60rem) {
   .-view::before {
     content: "MD";
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 80rem) {
   .-view::before {
     content: "LD";
   }
@@ -3628,14 +3628,35 @@ svg {
 }
 
 .body {
-  display: grid;
-  grid-template-columns: 3fr 10fr;
-  grid-template-rows: repeat(3, -webkit-min-content);
-  grid-template-rows: repeat(3, min-content);
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.main {
-  grid-column-start: 2;
-  grid-row-start: 1;
-  grid-row-end: span 3;
+@media (min-width: 42rem) {
+  .body {
+    max-width: 42rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .body {
+    display: grid;
+    grid-template-columns: 18rem auto;
+    grid-template-rows: repeat(3, -webkit-min-content);
+    grid-template-rows: repeat(3, min-content);
+    max-width: 60rem;
+  }
+
+  .main {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+  }
+}
+
+@media (min-width: 80rem) {
+  .body {
+    max-width: 80rem;
+  }
 }
