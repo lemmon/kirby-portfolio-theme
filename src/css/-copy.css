@@ -1,0 +1,34 @@
+.copy {
+  & > * {
+    max-width: 38rem;
+  }
+  & > * + * {
+    margin-top: 1em;
+  }
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    font-weight: bold;
+  }
+  & figure {
+    display: block;
+  }
+  & figcaption {
+    font-style: italic;
+  }
+  & img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  & strong {
+    font-weight: bold;
+  }
+  & em {
+    font-style: italic;
+  }
+}

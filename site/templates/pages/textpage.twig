@@ -1,1 +1,14 @@
 {% extends layout() %}
+
+{% block main %}
+
+  <div class="p1">
+    <h1 class="bold">{{ page.title }}</h1>
+  </div>
+  {% if page.text.notEmpty %}
+  <div class="p1 copy lh4">
+    {{ page.text | kt }}
+  </div>
+  {% endif %}
+
+{% endblock %}

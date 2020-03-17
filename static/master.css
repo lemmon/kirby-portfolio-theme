@@ -3592,6 +3592,41 @@ svg {
   }
 }
 
+.copy > * {
+  max-width: 38rem;
+}
+
+.copy > * + * {
+  margin-top: 1em;
+}
+
+.copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
+  font-weight: bold;
+}
+
+.copy figure {
+  display: block;
+}
+
+.copy figcaption {
+  font-style: italic;
+}
+
+.copy img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copy strong {
+  font-weight: bold;
+}
+
+.copy em {
+  font-style: italic;
+}
+
 .body {
   display: grid;
   grid-template-columns: 3fr 10fr;
