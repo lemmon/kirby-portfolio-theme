@@ -3,21 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/abrusco@0.9.0/css/abrusco.min.css">
-  <style>
-  .le__grid {
-    display: grid;
-    grid-template-columns: 3fr 10fr;
-    grid-template-rows: auto auto auto;
-  }
-  .le__grid__main {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: span 3;
-  }
-  </style>
+  <link rel="stylesheet" href="{{ kirby.url }}/static/master.css">
 </head>
-<body class="le__grid max80 mx p1 lh4">
+<body class="body max80 mx p1 lh4">
 
   <header>
     <h1 class="p1"><a class="block fw700" href="{{ kirby.url }}">{{ site.title }}</a></h1>
@@ -33,7 +21,7 @@
     </nav>
   </header>
 
-  <main class="le__grid__main">
+  <main class="main">
 
     <div class="grid3">
       {% for i in 1..20 %}

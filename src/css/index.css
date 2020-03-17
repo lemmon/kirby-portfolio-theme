@@ -1,0 +1,13 @@
+@import 'abrusco';
+
+.body {
+  display: grid;
+  grid-template-columns: 3fr 10fr;
+  grid-template-rows: auto auto auto;
+}
+
+.main {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: span 3;
+}

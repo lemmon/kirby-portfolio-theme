@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "abrusco": "^0.9.0"
+  },
+  "scripts": {
+    "w": "npm run build:css -- --watch",
+    "build:css": "abrusco src/css -o static/master.css",
+    "build": "npm run build:css"
+  }
+}
