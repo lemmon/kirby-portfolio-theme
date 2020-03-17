@@ -3595,7 +3595,8 @@ svg {
 .body {
   display: grid;
   grid-template-columns: 3fr 10fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: repeat(3, -webkit-min-content);
+  grid-template-rows: repeat(3, min-content);
 }
 
 .main {
