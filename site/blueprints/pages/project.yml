@@ -9,6 +9,7 @@ columns:
         type: files
         template: project
         layout: cards
+        size: tiny
         image:
           ratio: 1/1
           cover: true

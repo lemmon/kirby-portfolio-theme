@@ -15,10 +15,10 @@
       {% endif %}
 
     </div>
-    {% with { images: page.images } %}
-    {% if page.images.count %}
+    {% with { images: page.images.filterBy('template', 'project').sortBy('sort') } %}
+    {% if images.count %}
     <div class="span2">
-      {% for _image in images.sortBy('sort') %}
+      {% for _image in images %}
       <figure class="p1">
         <img
           class="block"

@@ -6,7 +6,7 @@
     {% for _page in site.pages %}
     {% if _page.template == 'project' %}
     {% with {
-      _image: _page.images.sortBy('sort').first,
+      _image: _page.images.filterBy('template', 'project').sortBy('sort').first,
     } %}
     <article class="p1"><a class="block anchor" href="{{ _page.url }}">
       <figure>
