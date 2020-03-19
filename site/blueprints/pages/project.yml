@@ -1,0 +1,28 @@
+title: Project
+
+columns:
+
+  - width: 1/2
+    sections:
+
+      project:
+        type: files
+        template: project
+        layout: cards
+        image:
+          ratio: 1/1
+          cover: true
+
+  - width: 1/2
+    sections:
+
+      content:
+        type: fields
+        fields:
+
+          text:
+            extends: fields/text
+
+      files:
+        extends: sections/files
+        template: default

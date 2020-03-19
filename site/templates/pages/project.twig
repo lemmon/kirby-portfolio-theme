@@ -1,0 +1,40 @@
+{% extends layout() %}
+
+{% block main %}
+
+  <div class="ld-row">
+    <div class="span1 order9">
+
+      <div class="p1">
+        <h1 class="bold">{{ page.title }}</h1>
+      </div>
+      {% if page.text.notEmpty %}
+      <div class="p1 copy lh4">
+        {{ page.text | kt }}
+      </div>
+      {% endif %}
+
+    </div>
+    {% with { images: page.images } %}
+    {% if page.images.count %}
+    <div class="span2">
+      {% for _image in images.sortBy('sort') %}
+      <figure class="p1">
+        <img
+          class="block"
+          style="max-width: 100%;"
+          {% if _image.extension in ['gif', 'svg'] %}
+          src="{{ _image.url }}"
+          {% else %}
+          src="{{ _image.resize(640).url }}"
+          srcset="{{ _image.srcset([480, 640, 960, 1280]) }}"
+          {% endif %}
+        >
+      </figure>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+  </div>
+
+{% endblock %}

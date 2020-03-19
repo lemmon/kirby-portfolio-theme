@@ -3,10 +3,32 @@
 {% block main %}
 
   <div class="sd-grid2 ld-grid3">
-    {% for i in 1..20 %}
-    <article class="p1">
-      <svg class="block bg-black-05" viewBox="0 0 1 1"></svg>
-    </article>
+    {% for _page in site.pages %}
+    {% if _page.template == 'project' %}
+    {% with {
+      _image: _page.images.sortBy('sort').first,
+    } %}
+    <article class="p1"><a class="block anchor" href="{{ _page.url }}">
+      <figure>
+        {% if _image %}
+        <img
+          class="block w100"
+          style="max-width: 100%;"
+          {% if _image.extension in ['gif', 'svg'] %}
+          src="{{ _image.url }}"
+          {% else %}
+          src="{{ _image.crop(288, 288).url }}"
+          srcset="{{ _image.crop(288, 288).url }} 288w,{{ _image.crop(576, 576).url }} 576w"
+          {% endif %}
+        >
+        {% else %}
+        <svg class="block bg-black-05" viewBox="0 0 1 1"></svg>
+        {% endif %}
+      </figure>
+      <h3 class="mt025 ul:hover">{{ _page.title }}</h3>
+    </a></article>
+    {% endwith %}
+    {% endif %}
     {% endfor %}
   </div>
 
