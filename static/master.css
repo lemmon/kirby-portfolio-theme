@@ -3612,6 +3612,10 @@ svg {
   font-style: italic;
 }
 
+.copy a {
+  text-decoration: underline;
+}
+
 .copy img {
   display: block;
   max-width: 100%;
