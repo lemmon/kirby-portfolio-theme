@@ -1,0 +1,15 @@
+title: Project Image
+
+accept:
+  mime: image/*
+
+fields:
+
+  caption:
+    label: Caption
+    type: textarea
+    buttons: false
+
+  alt:
+    label: Alt Text
+    type: text

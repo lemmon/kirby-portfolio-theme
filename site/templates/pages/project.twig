@@ -29,7 +29,11 @@
           src="{{ _image.resize(640).url }}"
           srcset="{{ _image.srcset([480, 640, 960, 1280]) }}"
           {% endif %}
+          alt="{{ _image.alt }}"
         >
+        {% if _image.caption.notEmpty %}
+        <figcaption class="copy italic"><p>{{ _image.caption | kti }}</p></figcaption>
+        {% endif %}
       </figure>
       {% endfor %}
     </div>
