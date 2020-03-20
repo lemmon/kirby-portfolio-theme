@@ -40,6 +40,9 @@
 
 }
 
+/* responsivity */
+
 @custom-media --view-sd (min-width: 42rem);
 @custom-media --view-md (min-width: 60rem);
 @custom-media --view-ld (min-width: 80rem);
+@custom-media --view-xl (min-width: 100rem);

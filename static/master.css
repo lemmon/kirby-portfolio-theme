@@ -1531,7 +1531,7 @@ svg {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 100rem) {
   .xl-show {
     display: block;
   }
@@ -2598,7 +2598,7 @@ svg {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 100rem) {
   .xl-p0 {
     padding: 0;
   }
@@ -3586,7 +3586,7 @@ svg {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 100rem) {
   .-view::before {
     content: "XL";
   }
