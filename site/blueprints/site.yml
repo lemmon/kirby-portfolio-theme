@@ -1,13 +1,30 @@
 title: Site
 
-sections:
+tabs:
 
-  pages:
-    headline: Pages
-    type: pages
-    create:
-      - project
-      - textpage
-    image:
-      query: page.images.filterBy('template', 'project').sortBy('sort').first
-      conver: true
+  content:
+    label: Content
+    icon: text
+    sections:
+
+      pages:
+        headline: Pages
+        type: pages
+        create:
+          - project
+          - textpage
+        image:
+          query: page.images.filterBy('template', 'project').sortBy('sort').first
+          conver: true
+
+  settings:
+    label: Settings
+    icon: cog
+    fields:
+
+      tagline:
+        label: Tagline
+        type: text
+        help: >
+          Tagline will be displayed in title tag next to your site name.
+          (e.g. {{ site.title }} - Your Custom Tagline)

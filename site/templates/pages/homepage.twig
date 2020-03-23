@@ -1,5 +1,9 @@
 {% extends layout() %}
 
+{% block title %}
+{% if site.tagline.notEmpty %}{{ site.title }} &ndash; {{ site.tagline }}{% else %}{{ parent() }}{% endif %}
+{% endblock %}
+
 {% block main %}
 
   <div class="sd-grid2 ld-grid3">
