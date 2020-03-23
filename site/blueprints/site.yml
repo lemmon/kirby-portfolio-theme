@@ -28,3 +28,7 @@ tabs:
         help: >
           Tagline will be displayed in title tag next to your site name.
           (e.g. {{ site.title }} - Your Custom Tagline)
+
+      description:
+        label: Description
+        type: textarea

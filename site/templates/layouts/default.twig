@@ -10,9 +10,11 @@
 
   <header>
     <h1 class="p1"><a class="block fw700" href="{{ kirby.url }}">{{ site.title }}</a></h1>
-    <aside class="p1">
-      <p>Nulla nisl libero, tempor eu urna a, facilisis ornare nibh. Phasellus sed ante venenatis, convallis lectus in, tristique metus. Nulla ac tincidunt nibh, sed mattis felis.</p>
+    {% if site.description.notEmpty %}
+    <aside class="copy p1">
+      {{ site.description | kt }}
     </aside>
+    {% endif %}
     <nav class="">
       <ul class="p1">
         {% for _page in site.pages.listed %}
