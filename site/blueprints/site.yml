@@ -50,6 +50,21 @@ tabs:
             label: Description
             type: textarea
 
+          social:
+            label: Social
+            type: structure
+            fields:
+              name:
+                label: Name
+                type: text
+              code:
+                label: Code
+                type: text
+                help: Font Awesome Unicode code.
+              url:
+                label: Url
+                type: url
+
           footer:
             label: Footer
             type: textarea

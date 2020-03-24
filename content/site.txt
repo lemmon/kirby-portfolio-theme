@@ -10,4 +10,21 @@ Description: Nulla nisl libero, tempor eu urna a, facilisis ornare nibh. Phasell
 
 ----
 
+Social:
+
+- 
+  name: Facebook
+  code: f082
+  url: https://www.facebook.com/
+- 
+  name: Instagram
+  code: f16d
+  url: https://www.instagram.com/
+- 
+  name: Twitter
+  code: f099
+  url: https://twitter.com/
+
+----
+
 Footer: (c) (date: year) All rights reserved.
