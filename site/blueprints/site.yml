@@ -20,15 +20,32 @@ tabs:
   settings:
     label: Settings
     icon: cog
-    fields:
+    sections:
 
-      tagline:
-        label: Tagline
-        type: text
-        help: >
-          Tagline will be displayed in title tag next to your site name.
-          (e.g. {{ site.title }} - Your Custom Tagline)
+      logo:
+        type: files
+        template: logo
+        empty: No logo yet
+        max: 1
+        sortable: false
+        layout: cards
+        size: tiny
+        info: "{{ file.width }} x {{ file.height }}"
+        image:
+          cover: false
+          back: white
 
-      description:
-        label: Description
-        type: textarea
+      fields:
+        type: fields
+        fields:
+
+          tagline:
+            label: Tagline
+            type: text
+            help: >
+              Tagline will be displayed in title tag next to your site name.
+              (e.g. {{ site.title }} - Your Custom Tagline)
+
+          description:
+            label: Description
+            type: textarea

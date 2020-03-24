@@ -10,7 +10,23 @@
 
   <header>
     <div class="py05 sd-p05">
-      <h1 class="p1"><a class="block fw700" href="{{ kirby.url }}">{{ site.title }}</a></h1>
+      {% with { logo: site.images.filterBy('template', 'logo').first } %}
+      {% if logo %}
+      <figure class="p1"><a
+        class="block"
+        href="{{ kirby.url }}"
+        style="width: {{ logo.width }}px; max-width: 100%; height: auto;"
+      ><img
+        class="block w100 ha"
+        src="{{ logo.url }}"
+        width="{{ logo.width }}"
+        height="{{ logo.height }}"
+        alt="{{ site.title }}"
+      ></a></figure>
+      {% else %}
+      <h1 class="p1"><a class="inline-block bold" href="{{ kirby.url }}">{{ site.title }}</a></h1>
+      {% endif %}
+      {% endwith %}
     </div>
     {% if site.description.notEmpty %}
     <div class="py05 sd-p05">
