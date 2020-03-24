@@ -6,16 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="{{ kirby.url }}/static/master.css">
 </head>
-<body class="body py1 sd-px1 lh4">
+<body class="body my1 py05 lh4">
 
   <header>
-    <h1 class="p1"><a class="block fw700" href="{{ kirby.url }}">{{ site.title }}</a></h1>
+    <div class="py05 sd-p05">
+      <h1 class="p1"><a class="block fw700" href="{{ kirby.url }}">{{ site.title }}</a></h1>
+    </div>
     {% if site.description.notEmpty %}
-    <aside class="copy p1">
-      {{ site.description | kt }}
-    </aside>
+    <div class="py05 sd-p05">
+      <aside class="copy p1">
+        {{ site.description | kt }}
+      </aside>
+    </div>
     {% endif %}
-    <nav class="">
+    <nav class="py05 sd-p05">
       <ul class="p1">
         {% for _page in site.pages.listed %}
         <li><a class="inline-block ul:hover{% if _page.id == page.id %} bg-yellow{% endif %}" href="{{ _page.url }}">{{ _page.title }}</a></li>
@@ -24,14 +28,16 @@
     </nav>
   </header>
 
-  <main class="main">
+  <main class="main py05 sd-p05">
 
     {% block main none %}
 
   </main>
 
-  <footer class="p1 col justify-end">
-    <p>&copy; {{ 'now' | date('Y') }} All rights reserved.</p>
+  <footer class="py05 sd-p05">
+    <div class="p1">
+      <p>&copy; {{ 'now' | date('Y') }} All rights reserved.</p>
+    </div>
   </footer>
 
 </body>

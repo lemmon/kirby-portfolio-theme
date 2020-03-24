@@ -1,6 +1,6 @@
 .copy {
   & > * {
-    max-width: 38rem;
+    max-width: 36rem;
   }
   & > * + * {
     margin-top: 1em;

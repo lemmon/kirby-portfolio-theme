@@ -1,4 +1,5 @@
 @import 'abrusco';
+@import '-body';
 @import '-copy';
 
 /* Inter font-family */
@@ -15,50 +16,11 @@ html {
   }
 }
 
-/* main grid */
-
-.body {
-  max-width: 28rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (--view-sd) {
-
-  .body {
-    max-width: 42rem;
-  }
-
-}
-
-@media (--view-md) {
-
-  .body {
-    display: grid;
-    grid-template-columns: 18rem auto;
-    grid-template-rows: repeat(3, min-content);
-    max-width: 60rem;
-  }
-
-  .main {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: span 3;
-  }
-
-}
-
-@media (--view-ld) {
-
-  .body {
-    max-width: 80rem;
-  }
-
-}
-
 /* responsivity */
 
-@custom-media --view-sd (min-width: 42rem);
-@custom-media --view-md (min-width: 60rem);
+@custom-media --view-sd (min-width: 40rem);
+@custom-media --view-md (min-width: 61rem);
 @custom-media --view-ld (min-width: 80rem);
 @custom-media --view-xl (min-width: 100rem);
+
+.max38 { max-width: 38rem; }

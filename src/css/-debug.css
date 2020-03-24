@@ -1,0 +1,47 @@
+@media (--view-sd) {
+
+  .body {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="672" height="16"> \
+      <g fill="%23b3d4fc" opacity=".2"> \
+        <rect x="48" width="272" height="16"/> \
+        <rect x="352" width="272" height="16"/> \
+      </g> \
+    </svg>');
+    background-position: top center;
+    background-repeat: repeat-y;
+  }
+
+}
+
+@media (--view-md) {
+
+  .body {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="976" height="16"> \
+      <g fill="%23b3d4fc" opacity=".2"> \
+        <rect x="48" width="256" height="16"/> \
+        <rect x="352" width="272" height="16"/> \
+        <rect x="656" width="272" height="16"/> \
+      </g> \
+    </svg>');
+    background-position: top center;
+    background-repeat: repeat-y;
+  }
+
+}
+
+@media (--view-ld) {
+
+  .body {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="16"> \
+      <g fill="%23b3d4fc" opacity=".2"> \
+        <rect x="48" width="256" height="16"/> \
+        <rect x="352" width="272" height="16"/> \
+        <rect x="656" width="272" height="16"/> \
+        <rect x="960" width="272" height="16"/> \
+      </g> \
+    </svg>');
+    background-position: top center;
+    background-repeat: repeat-y;
+  }
+
+}

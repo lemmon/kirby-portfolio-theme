@@ -5,14 +5,12 @@
   <div class="ld-row">
     <div class="span1 order9">
 
-      <div class="p1">
-        <h1 class="bold">{{ page.title }}</h1>
-      </div>
-      {% if page.text.notEmpty %}
       <div class="p1 copy lh4">
+        <h1>{{ page.title }}</h1>
+        {% if page.text.notEmpty %}
         {{ page.text | kt }}
+        {% endif %}
       </div>
-      {% endif %}
 
     </div>
     {% with { images: page.images.filterBy('template', 'project').sortBy('sort') } %}
