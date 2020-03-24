@@ -7,3 +7,7 @@ Tagline: Free Customizable Template
 ----
 
 Description: Nulla nisl libero, tempor eu urna a, facilisis ornare nibh. Phasellus sed ante venenatis, convallis lectus in, tristique metus. Nulla ac tincidunt nibh, sed mattis felis.
+
+----
+
+Footer: (c) (date: year) All rights reserved.

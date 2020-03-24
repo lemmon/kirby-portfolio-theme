@@ -50,11 +50,13 @@
 
   </main>
 
+  {% if site.footer.notEmpty %}
   <footer class="py05 sd-p05">
     <div class="p1">
-      <p>&copy; {{ 'now' | date('Y') }} All rights reserved.</p>
+      <p>{{ site.footer | kt }}</p>
     </div>
   </footer>
+  {% endif %}
 
 </body>
 </html>

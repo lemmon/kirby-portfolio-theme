@@ -49,3 +49,8 @@ tabs:
           description:
             label: Description
             type: textarea
+
+          footer:
+            label: Footer
+            type: textarea
+            buttons: false
