@@ -3652,6 +3652,7 @@ svg {
 
 .copy img {
   display: block;
+  height: auto;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;

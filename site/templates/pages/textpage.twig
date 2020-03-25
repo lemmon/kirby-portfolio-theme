@@ -5,7 +5,7 @@
   {% if page.text.notEmpty %}
   <div class="p1 copy lh4">
     <h1>{{ page.title }}</h1>
-    {{ page.text | kt }}
+    {{ page.text | kt({ width: 640, srcset: [ 320, 640, 960, 1280 ] }) }}
   </div>
   {% endif %}
 
