@@ -1,6 +1,7 @@
 bin
 kirby
-media
+media/*
+!media/index.html
 site/accounts/*
 !site/accounts/index.html
 site/cache/*
@@ -10,4 +11,3 @@ site/sessions/*
 node_modules
 vendor
 composer.lock
-!index.html
