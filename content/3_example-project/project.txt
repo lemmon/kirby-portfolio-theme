@@ -1,5 +1,0 @@
-Title: Example Project
-
-----
-
-Text: Nulla ullamcorper mauris magna, non auctor eros molestie pulvinar. Morbi id enim vestibulum, tempor quam a, commodo magna. Cras eros odio, rhoncus ac auctor eget, sodales tempus mauris. Fusce finibus mauris sed velit dictum ullamcorper. Duis sed urna leo. In volutpat ipsum at ante sodales tincidunt. Maecenas facilisis velit non posuere tempus. Quisque risus libero, sagittis sit amet nulla sit amet, sollicitudin maximus tortor. Ut suscipit aliquam diam, nec mollis arcu bibendum a. Morbi eleifend bibendum fringilla.
