@@ -69,3 +69,6 @@ tabs:
             label: Footer
             type: textarea
             buttons: false
+            help: >
+              This theme is completely free for both personal and commercial use,
+              however any kind of attribution is appreciated.

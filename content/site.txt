@@ -13,18 +13,15 @@ Description: Nulla nisl libero, tempor eu urna a, facilisis ornare nibh. Phasell
 Social:
 
 - 
-  name: Facebook
-  code: f082
-  url: https://www.facebook.com/
-- 
-  name: Instagram
-  code: f16d
-  url: https://www.instagram.com/
+  name: GitHub
+  code: f09b
+  url: >
+    https://github.com/lemmon/kirby-portfolio
 - 
   name: Twitter
   code: f099
-  url: https://twitter.com/
+  url: https://twitter.com/lemmon
 
 ----
 
-Footer: (c) (date: year) All rights reserved.
+Footer: (c) (date: year) Built with (link: https://getkirby.com/ text: Kirby) and the (link: https://github.com/lemmon/kirby-portfolio text: Portfolio Theme) by (link: https://twitter.com/lemmon text: Lemmon Juice)
