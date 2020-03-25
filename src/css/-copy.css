@@ -1,9 +1,7 @@
 .copy {
+  line-height: 1.5;
   & > * {
     max-width: 36rem;
-  }
-  & > * + * {
-    margin-top: 1em;
   }
   & h1,
   & h2,
@@ -11,13 +9,43 @@
   & h4,
   & h5,
   & h6 {
-    font-weight: bold;
+    margin-top: 1.5em;
   }
-  & figure {
-    display: block;
+  & p,
+  & figure,
+  & ol,
+  & ul,
+  & dl,
+  & pre,
+  & blockquote {
+    margin-top: 1em;
+  }
+  & :first-child {
+    margin-top: 0;
+  }
+  & h1 {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 32px;
+  }
+  & h2 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  & h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    font-weight: 700;
   }
   & figcaption {
     font-style: italic;
+    margin-top: .25em;
   }
   & a {
     text-decoration: underline;
@@ -34,5 +62,60 @@
   }
   & em {
     font-style: italic;
+  }
+  & ol,
+  & ul {
+    padding-left: 2em;
+    & li::before {
+      display: inline-block;
+      width: 2em;
+      padding-right: .5em;
+      margin-left: -2em;
+      text-align: right;
+      opacity: .2;
+    }
+  }
+  & ol {
+    counter-reset: ol;
+    & li::before {
+      counter-increment: ol;
+      content: counter(ol);
+      font-variant-numeric: tabular-nums;
+    }
+  }
+  & ul {
+    & li::before {
+      content: "\2013";
+    }
+  }
+  & blockquote {
+    padding-left: 2em;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 1.25em;
+      top: .25em;
+      bottom: .25em;
+      margin-left: -1px;
+      width: 2px;
+      background-color: currentColor;
+      opacity: .1;
+    }
+  }
+  & pre {
+    white-space: pre-wrap;
+  }
+  & code {
+    font-family: Courier, monospace;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  & dt {
+    opacity: .5;
+  }
+  & dd + dt {
+    margin-top: .5em;
   }
 }

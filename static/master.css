@@ -3626,24 +3626,49 @@ svg {
   }
 }
 
+.copy {
+  line-height: 1.5;
+}
+
 .copy > * {
   max-width: 36rem;
 }
 
-.copy > * + * {
+.copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
+  margin-top: 1.5em;
+}
+
+.copy p, .copy figure, .copy ol, .copy ul, .copy dl, .copy pre, .copy blockquote {
   margin-top: 1em;
 }
 
-.copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
-  font-weight: bold;
+.copy :first-child {
+  margin-top: 0;
 }
 
-.copy figure {
-  display: block;
+.copy h1 {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.copy h2 {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.copy h3 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
+  font-weight: 700;
 }
 
 .copy figcaption {
   font-style: italic;
+  margin-top: .25em;
 }
 
 .copy a {
@@ -3664,6 +3689,70 @@ svg {
 
 .copy em {
   font-style: italic;
+}
+
+.copy ol, .copy ul {
+  padding-left: 2em;
+}
+
+.copy ol li::before, .copy ul li::before {
+  display: inline-block;
+  width: 2em;
+  padding-right: .5em;
+  margin-left: -2em;
+  text-align: right;
+  opacity: .2;
+}
+
+.copy ol {
+  counter-reset: ol;
+}
+
+.copy ol li::before {
+  counter-increment: ol;
+  content: counter(ol);
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+.copy ul li::before {
+  content: "\2013";
+}
+
+.copy blockquote {
+  padding-left: 2em;
+  position: relative;
+}
+
+.copy blockquote::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 1.25em;
+  top: .25em;
+  bottom: .25em;
+  margin-left: -1px;
+  width: 2px;
+  background-color: currentColor;
+  opacity: .1;
+}
+
+.copy pre {
+  white-space: pre-wrap;
+}
+
+.copy code {
+  font-family: Courier, monospace;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.copy dt {
+  opacity: .5;
+}
+
+.copy dd + dt {
+  margin-top: .5em;
 }
 
 html {
