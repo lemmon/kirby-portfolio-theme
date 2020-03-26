@@ -72,15 +72,14 @@
       padding-right: .5em;
       margin-left: -2em;
       text-align: right;
-      opacity: .2;
+      opacity: .3;
     }
   }
   & ol {
     counter-reset: ol;
     & li::before {
       counter-increment: ol;
-      content: counter(ol);
-      font-variant-numeric: tabular-nums;
+      content: counter(ol, upper-roman);
     }
   }
   & ul {
@@ -104,13 +103,24 @@
       opacity: .1;
     }
   }
-  & pre {
-    white-space: pre-wrap;
-  }
+  & pre,
   & code {
     font-family: Courier, monospace;
     font-size: 14px;
     line-height: 20px;
+  }
+  & code {
+    display: inline-block;
+    background-color: var(--black-05);
+  }
+  & pre {
+    white-space: pre-wrap;
+    background-color: var(--black-05);
+    & code {
+      display: block;
+      padding: 16px 18px;
+      background-color: transparent;
+    }
   }
   & dt {
     opacity: .5;

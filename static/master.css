@@ -3701,7 +3701,7 @@ svg {
   padding-right: .5em;
   margin-left: -2em;
   text-align: right;
-  opacity: .2;
+  opacity: .3;
 }
 
 .copy ol {
@@ -3710,9 +3710,7 @@ svg {
 
 .copy ol li::before {
   counter-increment: ol;
-  content: counter(ol);
-  font-feature-settings: "tnum";
-  font-variant-numeric: tabular-nums;
+  content: counter(ol, upper-roman);
 }
 
 .copy ul li::before {
@@ -3737,14 +3735,28 @@ svg {
   opacity: .1;
 }
 
-.copy pre {
-  white-space: pre-wrap;
-}
-
-.copy code {
+.copy pre, .copy code {
   font-family: Courier, monospace;
   font-size: 14px;
   line-height: 20px;
+}
+
+.copy code {
+  display: inline-block;
+  background-color: rgba(4, 4, 4, .05);
+  background-color: var(--black-05);
+}
+
+.copy pre {
+  white-space: pre-wrap;
+  background-color: rgba(4, 4, 4, .05);
+  background-color: var(--black-05);
+}
+
+.copy pre code {
+  display: block;
+  padding: 16px 18px;
+  background-color: transparent;
 }
 
 .copy dt {
