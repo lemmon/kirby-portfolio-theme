@@ -27,3 +27,29 @@ columns:
       files:
         extends: sections/files
         template: default
+
+      metadata:
+        type: fields
+        fields:
+
+          client:
+            label: Client
+            type: text
+            icon: bookmark
+
+          role:
+            label: Role
+            type: text
+            icon: user
+            help: e.g. "Assistant Chief Lighting Technician" or "Horse Wrangler"
+
+          date:
+            label: Date
+            type: text
+            icon: calendar
+            help: e.g. "Feb 14, 2020" or "Summer 1979"
+
+          website:
+            label: Website
+            type: url
+            icon: url

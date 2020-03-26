@@ -12,6 +12,32 @@
         {% endif %}
       </div>
 
+      {% if page.client.notEmpty
+        or page.role.notEmpty
+        or page.date.notEmpty
+        or page.website.notEmpty %}
+      <div class="p1 copy lh4">
+        <dl>
+          {% if page.client.notEmpty %}
+          <dt>Client</dt>
+          <dd>{{ page.client }}</dd>
+          {% endif %}
+          {% if page.role.notEmpty %}
+          <dt>Role</dt>
+          <dd>{{ page.role }}</dd>
+          {% endif %}
+          {% if page.date.notEmpty %}
+          <dt>Date</dt>
+          <dd>{{ page.date }}</dd>
+          {% endif %}
+          {% if page.website.notEmpty %}
+          <dt>Website</dt>
+          <dd><a class="ul" href="{{ page.website }}">{{ page.website }}</a></dd>
+          {% endif %}
+        </dl>
+      </div>
+      {% endif %}
+
     </div>
     {% with { images: page.images.filterBy('template', 'project').sortBy('sort') } %}
     {% if images.count %}
