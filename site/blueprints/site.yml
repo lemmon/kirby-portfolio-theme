@@ -16,6 +16,7 @@ tabs:
         image:
           query: page.images.filterBy('template', 'project').sortBy('sort').first
           conver: true
+        info: "{{ page.intendedTemplate }}"
 
   settings:
     label: Settings
