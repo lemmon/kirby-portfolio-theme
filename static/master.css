@@ -3647,7 +3647,6 @@ svg {
 }
 
 .copy h1 {
-  font-weight: 800;
   font-size: 28px;
   line-height: 32px;
 }
@@ -3662,7 +3661,7 @@ svg {
   line-height: 24px;
 }
 
-.copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
+.copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
   font-weight: 700;
 }
 
