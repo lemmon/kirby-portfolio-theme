@@ -47,22 +47,13 @@
     {% if images.count %}
     <div class="span2">
       {% for _image in images %}
-      <figure class="p1">
-        <img
-          class="block"
-          style="max-width: 100%;"
-          {% if _image.extension in ['gif', 'svg'] %}
-          src="{{ _image.url }}"
-          {% else %}
-          src="{{ _image.resize(640).url }}"
-          srcset="{{ _image.srcset([480, 640, 960, 1280]) }}"
-          {% endif %}
-          alt="{{ _image.alt }}"
-        >
-        {% if _image.caption.notEmpty %}
-        <figcaption class="copy italic mt025"><p>{{ _image.caption | kti }}</p></figcaption>
-        {% endif %}
-      </figure>
+      <div class="p1 copy lh4">
+      {{
+        "(image: %s caption: %s)"
+          | format(_image.filename, _image.caption)
+          | kt({ width: 640, srcset: [ 320, 640, 960, 1280 ] })
+      }}
+      </div>
       {% endfor %}
     </div>
     {% endif %}
