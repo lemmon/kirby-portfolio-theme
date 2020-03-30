@@ -16,7 +16,7 @@ Social:
   name: GitHub
   code: f09b
   url: >
-    https://github.com/lemmon/kirby-portfolio
+    https://github.com/lemmon/kirby-portfolio-theme
 - 
   name: Twitter
   code: f099
@@ -24,4 +24,4 @@ Social:
 
 ----
 
-Footer: (c) (date: year) Built with (link: https://getkirby.com/ text: Kirby) and the (link: https://github.com/lemmon/kirby-portfolio text: Portfolio Theme) by (link: https://twitter.com/lemmon text: Lemmon Juice)
+Footer: (c) (date: year) Built with (link: https://github.com/lemmon/kirby-portfolio-theme text: Portfolio Theme) by (link: https://twitter.com/lemmon text: Lemmon Juice)
