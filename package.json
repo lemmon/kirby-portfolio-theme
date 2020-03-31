@@ -6,5 +6,6 @@
     "w": "npm run build:css -- --watch",
     "build:css": "abrusco src/css -o static/master.css",
     "build": "npm run build:css"
-  }
+  },
+  "browserslist": "last 2 versions, not dead"
 }
