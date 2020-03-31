@@ -111,6 +111,7 @@
   }
   & code {
     display: inline-block;
+    padding: 0 4px;
     background-color: var(--black-05);
   }
   & pre {
@@ -121,6 +122,10 @@
       padding: 16px 18px;
       background-color: transparent;
     }
+  }
+  & p code {
+    position: relative;
+    top: -2px;
   }
   & dt {
     opacity: .5;

@@ -3649,6 +3649,7 @@ svg {
 
 .copy code {
   display: inline-block;
+  padding: 0 4px;
   background-color: rgba(4, 4, 4, .05);
   background-color: var(--black-05);
 }
@@ -3663,6 +3664,11 @@ svg {
   display: block;
   padding: 16px 18px;
   background-color: transparent;
+}
+
+.copy p code {
+  position: relative;
+  top: -2px;
 }
 
 .copy dt {
