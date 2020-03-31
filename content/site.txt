@@ -1,12 +1,12 @@
-Title: Kriby Portfolio Theme
+Title: Portfolio Theme
 
 ----
 
-Tagline: Free Customizable Template
+Tagline: Free Customizable Kirby Template
 
 ----
 
-Description: Nulla nisl libero, tempor eu urna a, facilisis ornare nibh. Phasellus sed ante venenatis, convallis lectus in, tristique metus. Nulla ac tincidunt nibh, sed mattis felis.
+Description: Lemmon Portfolio is a free Kirby CMS theme. Minimalistic look with focus on your content. Customizable and responsive.
 
 ----
 
