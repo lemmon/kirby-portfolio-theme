@@ -25,3 +25,11 @@ Social:
 ----
 
 Footer: (c) (date: year) Built with (link: https://github.com/lemmon/kirby-portfolio-theme text: Portfolio Theme) by (link: https://twitter.com/lemmon text: Lemmon Juice)
+
+----
+
+Googleanalytics: 
+
+----
+
+Googletagmanager: 

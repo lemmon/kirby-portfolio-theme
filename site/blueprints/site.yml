@@ -64,6 +64,18 @@ tabs:
                   This theme is completely free for both personal and commercial use,
                   however any kind of attribution is appreciated.
 
+              googleAnalytics:
+                label: Google Analytics
+                type: text
+                placeholder: UA-XXXXX-Y
+                width: 1/2
+
+              googleTagManager:
+                label: Google Tag Manager
+                type: text
+                placeholder: GTM-XXXX
+                width: 1/2
+
       - width: 1/4
         sections:
 
