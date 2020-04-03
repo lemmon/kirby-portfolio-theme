@@ -1,4 +1,3 @@
-bin
 kirby
 media/*
 !media/index.html

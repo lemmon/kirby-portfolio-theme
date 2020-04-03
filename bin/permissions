@@ -1,0 +1,16 @@
+#!/bin/sh
+cd "$(dirname $0)/.."
+
+# make directories writable
+chmod 777 media
+chmod 777 site/accounts
+chmod 777 site/cache
+chmod 777 site/sessions
+# accounts files and directories writable
+find site/accounts -type d -exec chmod 0777 {} \;
+find site/accounts -type f -exec chmod 0666 {} \;
+# content files and directories writable
+find content -type d -exec chmod 0777 {} \;
+find content -type f -exec chmod 0666 {} \;
+# change owner of content
+chown -R `ls -ld . | awk '{print $3}'` content
