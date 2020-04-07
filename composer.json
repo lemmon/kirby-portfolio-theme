@@ -1,9 +1,20 @@
 {
+    "name": "lemmon/kirby-portfolio",
+    "type": "project",
+    "description": "Free customizable portfolio theme for Kirby CMS.",
+    "keywords": [
+        "kirby",
+        "cms",
+        "theme"
+    ],
+    "license": "MIT",
     "require": {
         "php": ">=7.1.0",
         "getkirby/cms": "^3.0",
-        "symfony/var-dumper": "^5.0",
         "twig/twig": "^3.0"
+    },
+    "require-dev": {
+      "symfony/var-dumper": "^5.0"
     },
     "config": {
         "optimize-autoloader": true
