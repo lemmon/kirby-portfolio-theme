@@ -3,37 +3,27 @@
   & * {
     max-width: 36rem;
   }
-  & h1,
-  & h2,
-  & h3,
-  & h4,
-  & h5,
-  & h6 {
+  & > * + * {
     margin-top: 1.5em;
-  }
-  & p,
-  & figure,
-  & ol,
-  & ul,
-  & dl,
-  & pre,
-  & blockquote {
-    margin-top: 1em;
   }
   & :first-child {
     margin-top: 0;
   }
   & h1 {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: var(--h2);
+    line-height: var(--lh2);
   }
   & h2 {
-    font-size: 22px;
-    line-height: 26px;
+    font-size: var(--h3);
+    line-height: var(--lh2);
   }
   & h3 {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: var(--h4);
+    line-height: var(--lh2);
+  }
+  & h4 {
+    font-size: var(--h5);
+    line-height: var(--lh2);
   }
   & h1,
   & h2,

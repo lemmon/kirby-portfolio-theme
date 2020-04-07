@@ -3541,12 +3541,8 @@ svg {
   max-width: 36rem;
 }
 
-.copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
+.copy > * + * {
   margin-top: 1.5em;
-}
-
-.copy p, .copy figure, .copy ol, .copy ul, .copy dl, .copy pre, .copy blockquote {
-  margin-top: 1em;
 }
 
 .copy :first-child {
@@ -3554,18 +3550,31 @@ svg {
 }
 
 .copy h1 {
-  font-size: 28px;
-  line-height: 32px;
+  font-size: 2rem;
+  font-size: var(--h2);
+  line-height: 1.25;
+  line-height: var(--lh2);
 }
 
 .copy h2 {
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 1.5rem;
+  font-size: var(--h3);
+  line-height: 1.25;
+  line-height: var(--lh2);
 }
 
 .copy h3 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  font-size: var(--h4);
+  line-height: 1.25;
+  line-height: var(--lh2);
+}
+
+.copy h4 {
+  font-size: 1.125rem;
+  font-size: var(--h5);
+  line-height: 1.25;
+  line-height: var(--lh2);
 }
 
 .copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
