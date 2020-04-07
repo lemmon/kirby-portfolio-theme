@@ -6,6 +6,32 @@ Text:
 
 This is an example site for the Lemmon Portfolio Theme. Built with (link: https://abrusco.com/ text: Abrusco CSS) on top of (link: https://getkirby.com/ text: Kirby CMS). This template is free, customizable, mobile-first, and responsive.
 
-# Installation
+## Installation
 
-Download the (link: https://github.com/lemmon/kirby-portfolio-theme/archive/master.zip text: zip archive) from (link: https://github.com/lemmon/kirby-portfolio-theme text: GitHub), extract it, and run `composer install`.
+### Composer
+
+```
+composer create-project lemmon/kirby-portfolio
+```
+
+### Git
+
+```
+git clone git@github.com:lemmon/kirby-portfolio-theme.git
+cd kirby-portfolio-theme
+composer install
+```
+
+### ZIP Archive
+
+Download the (link: https://github.com/lemmon/kirby-portfolio-theme/archive/master.zip text: zip archive) from (link: https://github.com/lemmon/kirby-portfolio-theme text: GitHub), extract it, and run `composer install` within the project root directory.
+
+## Troubleshooting
+
+Sometimes you might be faced with folder permissions issue. Try running `bin/permissions` to resolve this.
+
+You can read more about the Kirby CMS in their official (link: https://getkirby.com/docs text: documentation).
+
+## License
+
+This theme is released under the MIT license. For Kirby license see the (link: https://getkirby.com/license text: License) section on (link: https://getkirby.com/ text: Kirby CMS) official website.
