@@ -1,0 +1,19 @@
+{% extends layout() %}
+
+{% block main %}
+
+  {% if page.text.notEmpty %}
+  <div class="p025">
+    <div class="p075">
+      <h1 class="h2 lh2 fw800">{{ page.title }}</h1>
+    </div>
+    <div class="p075 copy lh4">
+      {{ page.text | kt({ width: 640, srcset: [ 320, 640, 960, 1280 ] }) }}
+      {% with { _page: page('home') } %}
+      <p>&larr; <a href="{{ _page.url }}">{{ _page.title }}</a></p>
+      {% endwith %}
+    </div>
+  </div>
+  {% endif %}
+
+{% endblock %}
