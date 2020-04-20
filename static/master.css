@@ -3797,16 +3797,35 @@ hr {
   line-height: 1.5;
 }
 
-.copy * {
+.copy > * {
   max-width: 36rem;
 }
 
-.copy > * + * {
+.copy > *:first-child {
+  margin-top: 0;
+}
+
+.copy > *:last-child {
+  margin-bottom: 0;
+}
+
+.copy > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p) {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.copy > h1, .copy > h2, .copy > h3, .copy > h4, .copy > h5, .copy > h6 {
   margin-top: 1.5em;
 }
 
-.copy :first-child {
-  margin-top: 0;
+.copy > p {
+  margin-top: .5em;
+  margin-bottom: 1.5em;
+}
+
+.copy > figure {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .copy h1 {

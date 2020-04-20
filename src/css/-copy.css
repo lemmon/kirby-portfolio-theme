@@ -1,13 +1,33 @@
 .copy {
   line-height: 1.5;
-  & * {
+  & > * {
     max-width: 36rem;
   }
-  & > * + * {
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+  & > *:not(h1,h2,h3,h4,h5,h6,p) {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6 {
     margin-top: 1.5em;
   }
-  & :first-child {
-    margin-top: 0;
+  & > p {
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+  }
+  & > figure {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
   }
   & h1 {
     font-size: var(--h2);
