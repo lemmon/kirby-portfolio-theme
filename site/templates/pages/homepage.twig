@@ -16,8 +16,7 @@
       <figure>
         {% if _image %}
         <img
-          class="block w100"
-          style="max-width: 100%;"
+          class="block w100 maxw"
           {% if _image.extension in ['gif', 'svg'] %}
           src="{{ _image.url }}"
           {% else %}

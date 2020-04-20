@@ -43,17 +43,7 @@ table {
 html {
   font-size: 16px;
   font-size: var(--font-size);
-  font-family: -apple-system,
-                 BlinkMacSystemFont,
-                 'Segoe UI',
-                 'Roboto',
-                 'Oxygen',
-                 'Ubuntu',
-                 'Cantarell',
-                 'Fira Sans',
-                 'Droid Sans',
-                 'Helvetica Neue',
-                 sans-serif;
+  font-family: 'Inter', sans-serif;
   font-family: var(--font-family);
   color: #040404;
   color: var(--text-color);
@@ -88,10 +78,6 @@ hr {
   border: 0;
 }
 
-svg {
-  fill: currentColor;
-}
-
 :root {
   --font-size: 16px;
   --font-family: var(--sansserif-font-family);
@@ -120,6 +106,11 @@ svg {
   --h4: 1.25rem;
   --h5: 1.125rem;
   --h6: 1.0625rem;
+  --d1: 3rem;
+  --d2: 3.5rem;
+  --d3: 4rem;
+  --d4: 5rem;
+  --d5: 6rem;
   --f0: 1rem;
   --f1: .9375rem;
   --f2: .875rem;
@@ -230,6 +221,31 @@ svg {
 .h6 {
   font-size: 1.0625rem;
   font-size: var(--h6);
+}
+
+.d1 {
+  font-size: 3rem;
+  font-size: var(--d1);
+}
+
+.d2 {
+  font-size: 3.5rem;
+  font-size: var(--d2);
+}
+
+.d3 {
+  font-size: 4rem;
+  font-size: var(--d3);
+}
+
+.d4 {
+  font-size: 5rem;
+  font-size: var(--d4);
+}
+
+.d5 {
+  font-size: 6rem;
+  font-size: var(--d5);
 }
 
 .f0 {
@@ -461,6 +477,31 @@ svg {
     font-size: 1.0625rem;
     font-size: var(--h6);
   }
+
+  .sd-d1 {
+    font-size: 3rem;
+    font-size: var(--d1);
+  }
+
+  .sd-d2 {
+    font-size: 3.5rem;
+    font-size: var(--d2);
+  }
+
+  .sd-d3 {
+    font-size: 4rem;
+    font-size: var(--d3);
+  }
+
+  .sd-d4 {
+    font-size: 5rem;
+    font-size: var(--d4);
+  }
+
+  .sd-d5 {
+    font-size: 6rem;
+    font-size: var(--d5);
+  }
 }
 
 @media (min-width: 61rem) {
@@ -505,6 +546,31 @@ svg {
     font-size: 1.0625rem;
     font-size: var(--h6);
   }
+
+  .md-d1 {
+    font-size: 3rem;
+    font-size: var(--d1);
+  }
+
+  .md-d2 {
+    font-size: 3.5rem;
+    font-size: var(--d2);
+  }
+
+  .md-d3 {
+    font-size: 4rem;
+    font-size: var(--d3);
+  }
+
+  .md-d4 {
+    font-size: 5rem;
+    font-size: var(--d4);
+  }
+
+  .md-d5 {
+    font-size: 6rem;
+    font-size: var(--d5);
+  }
 }
 
 @media (min-width: 80rem) {
@@ -548,6 +614,31 @@ svg {
   .ld-h6 {
     font-size: 1.0625rem;
     font-size: var(--h6);
+  }
+
+  .ld-d1 {
+    font-size: 3rem;
+    font-size: var(--d1);
+  }
+
+  .ld-d2 {
+    font-size: 3.5rem;
+    font-size: var(--d2);
+  }
+
+  .ld-d3 {
+    font-size: 4rem;
+    font-size: var(--d3);
+  }
+
+  .ld-d4 {
+    font-size: 5rem;
+    font-size: var(--d4);
+  }
+
+  .ld-d5 {
+    font-size: 6rem;
+    font-size: var(--d5);
   }
 }
 
@@ -623,12 +714,109 @@ svg {
   opacity: 0;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.z0 {
+  z-index: 0;
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.z2 {
+  z-index: 2;
+}
+
+.z3 {
+  z-index: 3;
+}
+
+.z9 {
+  z-index: 9;
+}
+
+.z99 {
+  z-index: 99;
+}
+
+.z999 {
+  z-index: 999;
+}
+
+.z9999 {
+  z-index: 9999;
+}
+
 .show {
   display: block;
 }
 
 .hide {
   display: none;
+}
+
+.min8 {
+  min-width: 8rem;
+}
+
+.min10 {
+  min-width: 10rem;
+}
+
+.min12 {
+  min-width: 12rem;
+}
+
+.min14 {
+  min-width: 14rem;
+}
+
+.min16 {
+  min-width: 16rem;
+}
+
+.min18 {
+  min-width: 18rem;
+}
+
+.min20 {
+  min-width: 20rem;
+}
+
+.min24 {
+  min-width: 24rem;
 }
 
 .max {
@@ -679,12 +867,32 @@ svg {
   max-width: 32rem;
 }
 
+.max34 {
+  max-width: 34rem;
+}
+
+.max35 {
+  max-width: 35rem;
+}
+
 .max36 {
   max-width: 36rem;
 }
 
+.max38 {
+  max-width: 38rem;
+}
+
 .max40 {
   max-width: 40rem;
+}
+
+.max42 {
+  max-width: 42rem;
+}
+
+.max44 {
+  max-width: 44rem;
 }
 
 .max45 {
@@ -705,6 +913,22 @@ svg {
 
 .max50 {
   max-width: 50rem;
+}
+
+.max51 {
+  max-width: 51rem;
+}
+
+.max52 {
+  max-width: 52rem;
+}
+
+.max54 {
+  max-width: 54rem;
+}
+
+.max55 {
+  max-width: 55rem;
 }
 
 .max56 {
@@ -743,12 +967,24 @@ svg {
   max-width: 77rem;
 }
 
+.max78 {
+  max-width: 78rem;
+}
+
 .max80 {
   max-width: 80rem;
 }
 
 .max90 {
   max-width: 90rem;
+}
+
+.maxw {
+  max-width: 100%;
+}
+
+.maxh {
+  max-height: 100%;
 }
 
 .w100 {
@@ -1448,6 +1684,10 @@ svg {
 
   .xl-hide {
     display: none;
+  }
+
+  .xl-max {
+    max-width: none;
   }
 
   .xl-order0 {
@@ -2721,6 +2961,26 @@ svg {
   border-radius: .5rem;
 }
 
+.br4 {
+  border-radius: .75rem;
+}
+
+.br5 {
+  border-radius: 1rem;
+}
+
+.br6 {
+  border-radius: 1.25rem;
+}
+
+.br7 {
+  border-radius: 1.5rem;
+}
+
+.br8 {
+  border-radius: 2rem;
+}
+
 .br100 {
   border-radius: 100%;
 }
@@ -3710,16 +3970,12 @@ svg {
   height: 100%;
 }
 
-html {
-  font-family: 'Inter', sans-serif;
+:root {
+  --font-family: 'Inter', sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif;
+  :root {
+    --font-family: 'Inter var', sans-serif;
   }
-}
-
-.max38 {
-  max-width: 38rem;
 }

@@ -4,13 +4,13 @@
 
 /* Inter font-family */
 
-html {
-  font-family: 'Inter', sans-serif;
+:root {
+  --font-family: 'Inter', sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif;
+  :root {
+    --font-family: 'Inter var', sans-serif;
   }
 }
 
@@ -20,5 +20,3 @@ html {
 @custom-media --view-md (min-width: 61rem);
 @custom-media --view-ld (min-width: 80rem);
 @custom-media --view-xl (min-width: 100rem);
-
-.max38 { max-width: 38rem; }
