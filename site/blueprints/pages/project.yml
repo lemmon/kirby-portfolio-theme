@@ -24,6 +24,13 @@ columns:
           text:
             extends: fields/text
 
+          textPosition:
+            label: Text Position
+            type: select
+            placeholder: aside
+            options:
+              - above
+
       files:
         extends: sections/files
         template: default

@@ -36,7 +36,9 @@ Kirby::plugin('lemmon/image-tag', [
           ]),
         ], $caption ? [
           kirbytext($caption),
-        ] : null);
+        ] : null, [
+          'class' => 'image',
+        ]);
       },
     ],
   ],

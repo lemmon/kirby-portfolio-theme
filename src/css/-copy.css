@@ -35,7 +35,7 @@
   }
   & figcaption {
     font-style: italic;
-    margin-top: .25em;
+    margin-top: .5em;
   }
   & a {
     text-decoration: underline;
@@ -122,6 +122,27 @@
   }
   & dd + dt {
     margin-top: .5em;
+  }
+}
+
+@media (--view-ld) {
+  .copy--wide {
+    & figure.image {
+      max-width: none;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      & img {
+        width: 36rem;
+      }
+      & figcaption {
+        width: 19rem;
+        margin: 0;
+        padding-left: 2rem;
+        position: sticky;
+        top: 2rem;
+      }
+    }
   }
 }
 

@@ -3843,7 +3843,7 @@ hr {
 
 .copy figcaption {
   font-style: italic;
-  margin-top: .25em;
+  margin-top: .5em;
 }
 
 .copy a {
@@ -3946,6 +3946,28 @@ hr {
 
 .copy dd + dt {
   margin-top: .5em;
+}
+
+@media (min-width: 80rem) {
+  .copy--wide figure.image {
+    max-width: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .copy--wide figure.image img {
+    width: 36rem;
+  }
+
+  .copy--wide figure.image figcaption {
+    width: 19rem;
+    margin: 0;
+    padding-left: 2rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2rem;
+  }
 }
 
 .video {
