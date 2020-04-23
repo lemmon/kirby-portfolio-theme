@@ -3763,6 +3763,8 @@ hr {
   max-width: 28rem;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 @media (min-width: 40rem) {
