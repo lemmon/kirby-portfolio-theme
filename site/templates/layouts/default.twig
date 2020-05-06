@@ -66,9 +66,9 @@
     </div>
     {% endif %}
     <nav class="py05 sd-p05">
-      <ul class="p1">
+      <ul class="px075 py1">
         {% for _page in site.pages.listed %}
-        <li><a class="inline-block ul:hover{% if _page.id == page.id %} bg-yellow{% endif %}" href="{{ _page.url }}">{{ _page.title }}</a></li>
+        <li class="px0125"><a class="inlineblock px0125 ul:hover{% if _page.id == page.id %} bg-yellow{% endif %}" href="{{ _page.url }}">{{ _page.title }}</a></li>
         {% endfor %}
       </ul>
     </nav>
