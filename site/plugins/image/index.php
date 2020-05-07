@@ -30,7 +30,7 @@ Kirby::plugin('lemmon/image-tag', [
           Html::img($file->url(), [
             'width'  => $file->width(),
             'height' => $file->height(),
-            'alt'    => $alt ?? ' ',
+            'alt'    => $alt ?: ' ',
             'title'  => $title,
             'srcset' => $srcset ?? null,
           ]),
