@@ -138,7 +138,7 @@
     top: -2px;
   }
   & dt {
-    opacity: .5;
+    opacity: .6;
   }
   & dd + dt {
     margin-top: .5em;
