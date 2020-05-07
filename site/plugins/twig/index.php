@@ -24,6 +24,25 @@ function twig(string $template, array $data = null)
   $twig->addFunction(new Twig\TwigFunction('pages', 'pages'));
   $twig->addFilter(new Twig\TwigFilter('kt', 'kirbytext', ['is_safe' => ['html']]));
   $twig->addFilter(new Twig\TwigFilter('kti', 'kirbytextinline', ['is_safe' => ['html']]));
+  $twig->addFilter(new Twig\TwigFilter('excerpt', function ($text, $len = null) {
+    $text = strval($text);
+    $text = preg_split('/\n\h*\n/', $text);
+    $text = array_filter($text, function ($p) {
+      return $p and !preg_match('/^(\d+\.|[\-\+\*]\s|[#!\>])/', $p);
+    });
+    if (!$text) return null;
+    $text = reset($text);
+    $text = kirbytextinline($text);
+    $text = strip_tags($text);
+    $text = html_entity_decode($text);
+    $text = preg_replace('/\n+/', ' ', $text);
+    if ($len and mb_strlen($text) > $len) {
+      $text = mb_substr($text, 0, $len);
+      $text = preg_replace('/\W+$/u', '', $text);
+      $append = '&hellip;';
+    }
+    return $text ? htmlspecialchars($text, ENT_COMPAT | ENT_HTML5) . ($append ?? '') : null;
+  }, ['is_safe' => ['html']]));
   $twig->addGlobal('kirby', kirby());
   $twig->addGlobal('site', site());
   $twig->addGlobal('page', page());

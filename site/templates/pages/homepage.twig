@@ -4,6 +4,8 @@
 {% if site.tagline.notEmpty %}{{ site.title }} &ndash; {{ site.tagline }}{% else %}{{ parent() }}{% endif %}
 {% endblock %}
 
+{% block meta_description parent() ?: site.description | excerpt(160) %}
+
 {% block main %}
 
   <div class="sd-grid2 ld-grid3">
