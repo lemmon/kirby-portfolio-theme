@@ -33,3 +33,7 @@ Googleanalytics:
 ----
 
 Googletagmanager: 
+
+----
+
+Htmllang: en

@@ -64,6 +64,11 @@ tabs:
                   This theme is completely free for both personal and commercial use,
                   however any kind of attribution is appreciated.
 
+              htmlLang:
+                label: Document Language
+                type: text
+                help: &lt;html lang="{{site.htmlLang}}"&gt;
+
               googleAnalytics:
                 label: Google Analytics
                 type: text
