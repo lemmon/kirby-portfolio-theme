@@ -27,7 +27,7 @@ extract it, and run `composer install` within the project root directory.
 
 ## Troubleshooting
 
-Sometimes you might be faced with folder permissions issue. Try running `bin/permissions` to resolve this.
+Sometimes you might face a folder permissions issue. Try running `bin/permissions` to resolve this.
 
 You can read more about the Kirby CMS in their official [documentation](https://getkirby.com/docs).
 
@@ -35,4 +35,3 @@ You can read more about the Kirby CMS in their official [documentation](https://
 
 This theme is released under the MIT license. For Kirby license see the [License](https://getkirby.com/license) section
 on [Kirby CMS](https://getkirby.com/) official website.
-
