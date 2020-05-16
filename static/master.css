@@ -727,7 +727,6 @@ hr {
 }
 
 .sticky {
-  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -3985,7 +3984,6 @@ hr {
     width: 19rem;
     margin: 0;
     padding-left: 2rem;
-    position: -webkit-sticky;
     position: sticky;
     top: 2rem;
   }
