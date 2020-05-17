@@ -28,6 +28,10 @@ Footer: (c) (date: year) Built with (link: https://github.com/lemmon/kirby-portf
 
 ----
 
+Htmllang: en
+
+----
+
 Googleanalytics: 
 
 ----
@@ -36,4 +40,24 @@ Googletagmanager:
 
 ----
 
-Htmllang: en
+Backgroundcolor: 
+
+----
+
+Textcolor: 
+
+----
+
+Linkcolor: 
+
+----
+
+Highlighttextcolor: 
+
+----
+
+Highlightbackgroundcolor: 
+
+----
+
+Highlightcolor: 

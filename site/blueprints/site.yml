@@ -23,7 +23,7 @@ tabs:
     icon: cog
     columns:
 
-      - width: 3/4
+      - width: 2/3
         sections:
 
           fields:
@@ -64,24 +64,33 @@ tabs:
                   This theme is completely free for both personal and commercial use,
                   however any kind of attribution is appreciated.
 
-              htmlLang:
-                label: Document Language
-                type: text
-                help: &lt;html lang="{{site.htmlLang}}"&gt;
+      - width: 1/3
+        fields:
 
-              googleAnalytics:
-                label: Google Analytics
-                type: text
-                placeholder: UA-XXXXX-Y
-                width: 1/2
+          htmlLang:
+            label: Document Language
+            type: text
+            help: &lt;html lang="{{site.htmlLang}}"&gt;
 
-              googleTagManager:
-                label: Google Tag Manager
-                type: text
-                placeholder: GTM-XXXX
-                width: 1/2
+          googleAnalytics:
+            label: Google Analytics
+            type: text
+            placeholder: UA-XXXXX-Y
+            width: 1/2
 
-      - width: 1/4
+          googleTagManager:
+            label: Google Tag Manager
+            type: text
+            placeholder: GTM-XXXX
+            width: 1/2
+
+
+  visual:
+    label: Visual
+    icon: settings
+    columns:
+
+      - width: 1/3
         sections:
 
           logo:
@@ -91,13 +100,12 @@ tabs:
             max: 1
             sortable: false
             layout: cards
-            size: tiny
+            size: huge
             info: "{{ file.width }} x {{ file.height }}"
             image:
               ratio: 1/1
               cover: false
               back: white
-            width: 1/2
 
           favicon:
             type: files
@@ -105,10 +113,32 @@ tabs:
             empty: No favicon uploaded
             max: 1
             sortable: false
-            layout: cards
             size: tiny
             info: "{{ file.width }} x {{ file.height }} ({{ file.mime }})"
             image:
               ratio: 1/1
-              cover: true
-            width: 1/2
+              cover: false
+
+      - width: 1/3
+        fields:
+
+          backgroundColor:
+            label: Background Color
+            type: text
+
+          textColor:
+            label: Text Color
+            type: text
+
+          linkColor:
+            label: Link Color
+            type: text
+
+          highlightTextColor:
+            label: Highlight Text Color
+            type: text
+            alpha: true
+
+          highlightBackgroundColor:
+            label: Highlight Background Color
+            type: text

@@ -41,6 +41,27 @@
   <!-- End Google Tag Manager (noscript) -->
   {% endif %}
 
+  <style media="screen">
+  :root {
+    {%~ for propName, cssProp in {
+      backgroundColor: 'background-color',
+      textColor: 'text-color',
+      linkColor: 'link-color',
+      highlightTextColor: 'highlight-text-color',
+      highlightBackgroundColor: 'highlight-background-color',
+    } %}
+    {%~ with { prop: site.content.get(propName) } %}
+    {%~ if (prop.notEmpty) %}
+    --theme-{{ cssProp }}: {{ prop.isColor ? prop.toColor : prop.value }};
+    {%~ endif %}
+    {%~ endwith %}
+    {%~ endfor %}
+    {%~ if site.textColor.notEmpty %}
+    --theme-text-color-05: {{ site.textColor.toColor.setAlpha(5).value }};
+    {%~ endif %}
+  }
+  </style>
+
   <header>
     <div class="py05 sd-p05">
       {% with { logo: site.images.filterBy('template', 'logo').first } %}
@@ -71,7 +92,7 @@
     <nav class="py05 sd-p05">
       <ul class="px075 py1">
         {% for _page in site.pages.listed %}
-        <li class="px0125"><a class="inlineblock px0125 ul:hover{% if _page.id == page.id %} bg-yellow{% endif %}" href="{{ _page.url }}">{{ _page.title }}</a></li>
+        <li class="px0125"><a class="inlineblock px0125 ul:hover{% if _page.id == page.id %} color-highlight bg-highlight{% else %} color-link:hover{% endif %}" href="{{ _page.url }}">{{ _page.title }}</a></li>
         {% endfor %}
       </ul>
     </nav>

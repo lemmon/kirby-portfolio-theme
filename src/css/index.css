@@ -1,6 +1,7 @@
 @import 'abrusco';
 @import '-body';
 @import '-copy';
+@import '-color';
 
 /* Inter font-family */
 
@@ -20,3 +21,20 @@
 @custom-media --view-md (min-width: 61rem);
 @custom-media --view-ld (min-width: 80rem);
 @custom-media --view-xl (min-width: 100rem);
+
+/* theme variables */
+
+:root {
+
+  --theme-background-color:           var(--white);
+  --theme-text-color:                 var(--black);
+  --theme-text-color-05:              var(--black-05);
+  --theme-link-color:                 inherit;
+  --theme-highlight-text-color:       inherit;
+  --theme-highlight-background-color: var(--yellow);
+
+  --background-color:                 var(--theme-background-color);
+  --text-color:                       var(--theme-text-color);
+  --link-color:                       var(--theme-link-color);
+
+}

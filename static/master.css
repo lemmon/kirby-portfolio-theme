@@ -3867,6 +3867,8 @@ hr {
 }
 
 .copy a {
+  color: inherit;
+  color: var(--link-color);
   text-decoration: underline;
 }
 
@@ -3937,16 +3939,15 @@ hr {
 }
 
 .copy code {
-  display: inline-block;
-  padding: 0 4px;
+  padding: 2px;
   background-color: rgba(4, 4, 4, .05);
-  background-color: var(--black-05);
+  background-color: var(--theme-text-color-05);
 }
 
 .copy pre {
   white-space: pre-wrap;
   background-color: rgba(4, 4, 4, .05);
-  background-color: var(--black-05);
+  background-color: var(--theme-text-color-05);
 }
 
 .copy pre code {
@@ -4011,6 +4012,21 @@ hr {
   height: 100%;
 }
 
+.color-link, .color-link\:hover:hover, .anchor:hover .color-link\:hover {
+  color: inherit;
+  color: var(--link-color);
+}
+
+.color-highlight {
+  color: inherit;
+  color: var(--theme-highlight-text-color);
+}
+
+.bg-highlight {
+  background-color: #ffdc00;
+  background-color: var(--theme-highlight-background-color);
+}
+
 :root {
   --font-family: 'Inter', sans-serif;
 }
@@ -4019,4 +4035,16 @@ hr {
   :root {
     --font-family: 'Inter var', sans-serif;
   }
+}
+
+:root {
+  --theme-background-color: var(--white);
+  --theme-text-color: var(--black);
+  --theme-text-color-05: var(--black-05);
+  --theme-link-color: inherit;
+  --theme-highlight-text-color: inherit;
+  --theme-highlight-background-color: var(--yellow);
+  --background-color: var(--theme-background-color);
+  --text-color: var(--theme-text-color);
+  --link-color: var(--theme-link-color);
 }
