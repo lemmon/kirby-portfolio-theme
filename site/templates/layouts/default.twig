@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <title>{% block title %}{{ page.title }} &ndash; {{ site.title }}{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% block meta %}
+  {%~ block meta %}
   <meta name="description" content="{% block meta_description page.text | excerpt(160) %}">
-  {% endblock %}
+  {%~ endblock %}
   <link rel="stylesheet" href="{{ kirby.url }}/static/master.css">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/brands.css">
-  {% if site.googleAnalytics.notEmpty %}
+  {%~ if site.googleAnalytics.notEmpty %}
   <!-- Google Analytics -->
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,8 +21,8 @@
   ga('send', 'pageview');
   </script>
   <!-- End Google Analytics -->
-  {% endif %}
-  {% if site.googleTagManager.notEmpty %}
+  {%~ endif %}
+  {%~ if site.googleTagManager.notEmpty %}
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -30,16 +30,16 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','{{ site.googleTagManager }}');</script>
   <!-- End Google Tag Manager -->
-  {% endif %}
+  {%~ endif %}
 </head>
 <body class="body lh4">
 
-  {% if site.googleTagManager.notEmpty %}
+  {%~ if site.googleTagManager.notEmpty %}
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.googleTagManager }}"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  {% endif %}
+  {%~ endif %}
 
   <style media="screen">
   :root {
@@ -64,8 +64,8 @@
 
   <header>
     <div class="py05 sd-p05">
-      {% with { logo: site.images.filterBy('template', 'logo').first } %}
-      {% if logo %}
+      {%~ with { logo: site.images.filterBy('template', 'logo').first } %}
+      {%~ if logo %}
       <figure class="p1"><a
         class="block maxw ha"
         href="{{ kirby.url }}"
@@ -77,49 +77,47 @@
         height="{{ logo.height }}"
         alt="{{ site.title }}"
       ></a></figure>
-      {% else %}
+      {%~ else %}
       <h1 class="p1"><a class="block h1 lh1 fw800" href="{{ kirby.url }}">{{ site.title }}</a></h1>
-      {% endif %}
-      {% endwith %}
+      {%~ endif %}
+      {%~ endwith %}
     </div>
-    {% if site.description.notEmpty %}
+    {%~ if site.description.notEmpty %}
     <div class="py05 sd-p05">
       <aside class="copy p1">
         {{ site.description | kt }}
       </aside>
     </div>
-    {% endif %}
+    {%~ endif %}
     <nav class="py05 sd-p05">
       <ul class="px075 py1">
-        {% for _page in site.pages.listed %}
-        <li class="px0125"><a class="inlineblock px0125 ul:hover{% if _page.id == page.id %} color-highlight bg-highlight{% else %} color-link:hover{% endif %}" href="{{ _page.url }}">{{ _page.title }}</a></li>
-        {% endfor %}
+        {%~ for _page in site.pages.listed %}
+        <li class="px0125"><a class="inlineblock px0125 ul:hover {%- if _page.id == page.id %} color-highlight bg-highlight{% else %} color-link:hover{% endif %}" href="{{ _page.url }}">{{ _page.title }}</a></li>
+        {%~ endfor %}
       </ul>
     </nav>
-    {% if site.social.notEmpty %}
+    {%~ if site.social.notEmpty %}
     <aside class="py05 sd-p05">
       <ul class="p05 row flex-wrap">
-        {% for item in site.social.toStructure %}
+        {%~ for item in site.social.toStructure %}
         <li class="p05 h3 lh0"><a class="block" title="{{ item.name }}" href="{{ item.url }}"><span class="fab block" aria-hidden="true">&#x{{ item.code }};</span><span class="hide">{{ item.name }}</span></a></li>
-        {% endfor %}
+        {%~ endfor %}
       </ul>
     </aside>
-    {% endif %}
+    {%~ endif %}
   </header>
 
   <main class="main py05 sd-p05">
-
-    {% block main none %}
-
+    {%~ block main none %}
   </main>
 
-  {% if site.footer.notEmpty %}
+  {%~ if site.footer.notEmpty %}
   <footer class="py05 sd-p05">
     <div class="p1 copy">
       {{ site.footer | kt }}
     </div>
   </footer>
-  {% endif %}
+  {%~ endif %}
 
 </body>
 </html>

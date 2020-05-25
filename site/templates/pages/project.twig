@@ -5,77 +5,77 @@
   tp: page.textPosition.value,
 } %}
 
-  <div class="{% if not tp %}ld-row{% endif %}">
-    <div class="span1 order9">
+    <div class="{% if not tp %}ld-row{% endif %}">
+      <div class="span1 order9">
 
-      <div class="p025">
+        <div class="p025">
 
-        <div class="p075">
-          <h1 class="h2 {% if not tp %}ld-h3{% endif %} lh2 fw800">{{ page.title }}</h1>
-        </div>
-
-        {% if page.text.notEmpty
-          or page.client.notEmpty
-          or page.role.notEmpty
-          or page.date.notEmpty
-          or page.website.notEmpty %}
-        <div class="{% if tp == 'above' %}ld-row{% endif %}">
-          {% if page.text.notEmpty %}
-          <div class="span2">
-            <div class="p075 copy lh4">
-              {{ page.text | kt({ width: 640, srcset: [ 320, 640, 960, 1280 ] }) }}
-            </div>
+          <div class="p075">
+            <h1 class="h2 {%- if not tp %} ld-h3{% endif %} lh2 fw800">{{ page.title }}</h1>
           </div>
-          {% endif %}
-          {% if page.client.notEmpty
+
+          {%~ if page.text.notEmpty
+            or page.client.notEmpty
             or page.role.notEmpty
             or page.date.notEmpty
             or page.website.notEmpty %}
-          <div class="span1">
-            <div class="p075 copy lh4">
-              <dl>
-                {% if page.client.notEmpty %}
-                <dt>Client</dt>
-                <dd>{{ page.client }}</dd>
-                {% endif %}
-                {% if page.role.notEmpty %}
-                <dt>Role</dt>
-                <dd>{{ page.role }}</dd>
-                {% endif %}
-                {% if page.date.notEmpty %}
-                <dt>Date</dt>
-                <dd>{{ page.date }}</dd>
-                {% endif %}
-                {% if page.website.notEmpty %}
-                <dt>Website</dt>
-                <dd><a class="ul" href="{{ page.website }}">{{ page.website }}</a></dd>
-                {% endif %}
-              </dl>
+          <div class="{% if tp == 'above' %}ld-row{% endif %}">
+            {%~ if page.text.notEmpty %}
+            <div class="span2">
+              <div class="p075 copy lh4">
+                {{ page.text | kt({ width: 640, srcset: [ 320, 640, 960, 1280 ] }) }}
+              </div>
             </div>
+            {%~ endif %}
+            {%~ if page.client.notEmpty
+              or page.role.notEmpty
+              or page.date.notEmpty
+              or page.website.notEmpty %}
+            <div class="span1">
+              <div class="p075 copy lh4">
+                <dl>
+                  {%~ if page.client.notEmpty %}
+                  <dt>Client</dt>
+                  <dd>{{ page.client }}</dd>
+                  {%~ endif %}
+                  {%~ if page.role.notEmpty %}
+                  <dt>Role</dt>
+                  <dd>{{ page.role }}</dd>
+                  {%~ endif %}
+                  {%~ if page.date.notEmpty %}
+                  <dt>Date</dt>
+                  <dd>{{ page.date }}</dd>
+                  {%~ endif %}
+                  {%~ if page.website.notEmpty %}
+                  <dt>Website</dt>
+                  <dd><a class="ul" href="{{ page.website }}">{{ page.website }}</a></dd>
+                  {%~ endif %}
+                </dl>
+              </div>
+            </div>
+            {%~ endif %}
           </div>
-          {% endif %}
+          {%~ endif %}
+
         </div>
-        {% endif %}
 
       </div>
-
-    </div>
-    {% with { images: page.images.filterBy('template', 'project').sortBy('sort') } %}
-    {% if images.count %}
-    <div class="span2">
-      {% for _image in images %}
-      <div class="p1 copy {%- if tp == 'above' %} copy--wide{% endif %} lh4">
-      {{
-        "(image: %s caption: %s)"
-          | format(_image.filename, _image.caption)
-          | kt({ width: 640, srcset: [ 320, 640, 960, 1280 ] })
-      }}
+      {%~ with { images: page.images.filterBy('template', 'project').sortBy('sort') } %}
+      {%~ if images.count %}
+      <div class="span2">
+        {%~ for _image in images %}
+        <div class="p1 copy {%- if tp == 'above' %} copy--wide{% endif %} lh4">
+          {{
+            "(image: %s caption: %s)"
+              | format(_image.filename, _image.caption)
+              | kt({ width: 640, srcset: [ 320, 640, 960, 1280 ] })
+          }}
+        </div>
+        {%~ endfor %}
       </div>
-      {% endfor %}
+      {%~ endif %}
+      {%~ endwith %}
     </div>
-    {% endif %}
-    {% endwith %}
-  </div>
 
 {% endwith %}
 {% endblock %}
