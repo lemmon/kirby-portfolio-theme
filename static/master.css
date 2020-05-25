@@ -3824,11 +3824,6 @@ hr {
   margin-bottom: 1.5em;
 }
 
-.copy > figure {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-}
-
 .copy h1 {
   font-size: 2rem;
   font-size: var(--h2);

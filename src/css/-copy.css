@@ -25,10 +25,6 @@
     margin-top: .5em;
     margin-bottom: 1.5em;
   }
-  & > figure {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-  }
   & h1 {
     font-size: var(--h2);
     line-height: var(--lh2);
