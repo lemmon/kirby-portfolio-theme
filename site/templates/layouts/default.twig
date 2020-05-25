@@ -10,6 +10,26 @@
   <link rel="stylesheet" href="{{ kirby.url }}/static/master.css">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/brands.css">
+  <style media="screen">
+  :root {
+    {%~ for propName, cssProp in {
+      backgroundColor: 'background-color',
+      textColor: 'text-color',
+      linkColor: 'link-color',
+      highlightTextColor: 'highlight-text-color',
+      highlightBackgroundColor: 'highlight-background-color',
+    } %}
+    {%~ with { prop: site.content.get(propName) } %}
+    {%~ if (prop.notEmpty) %}
+    --theme-{{ cssProp }}: {{ prop.isColor ? prop.toColor : prop.value }};
+    {%~ endif %}
+    {%~ endwith %}
+    {%~ endfor %}
+    {%~ if site.textColor.notEmpty %}
+    --theme-text-color-05: {{ site.textColor.toColor.setAlpha(5).value }};
+    {%~ endif %}
+  }
+  </style>
   {%~ if site.googleAnalytics.notEmpty %}
   <!-- Google Analytics -->
   <script>
@@ -40,27 +60,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   {%~ endif %}
-
-  <style media="screen">
-  :root {
-    {%~ for propName, cssProp in {
-      backgroundColor: 'background-color',
-      textColor: 'text-color',
-      linkColor: 'link-color',
-      highlightTextColor: 'highlight-text-color',
-      highlightBackgroundColor: 'highlight-background-color',
-    } %}
-    {%~ with { prop: site.content.get(propName) } %}
-    {%~ if (prop.notEmpty) %}
-    --theme-{{ cssProp }}: {{ prop.isColor ? prop.toColor : prop.value }};
-    {%~ endif %}
-    {%~ endwith %}
-    {%~ endfor %}
-    {%~ if site.textColor.notEmpty %}
-    --theme-text-color-05: {{ site.textColor.toColor.setAlpha(5).value }};
-    {%~ endif %}
-  }
-  </style>
 
   <header>
     <div class="py05 sd-p05">

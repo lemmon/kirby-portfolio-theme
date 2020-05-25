@@ -125,10 +125,12 @@ tabs:
           backgroundColor:
             label: Background Color
             type: text
+            placeholder: '#FFFFFF'
 
           textColor:
             label: Text Color
             type: text
+            placeholder: '#040404'
 
           linkColor:
             label: Link Color
@@ -137,8 +139,8 @@ tabs:
           highlightTextColor:
             label: Highlight Text Color
             type: text
-            alpha: true
 
           highlightBackgroundColor:
             label: Highlight Background Color
             type: text
+            placeholder: '#FFDC00'
