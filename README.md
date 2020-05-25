@@ -1,5 +1,7 @@
 # Kirby Portfolio Theme
 
+![Kirby Portfolio Theme](https://themes.lemmonjuice.com/portfolio--anim@1440w.webp)
+
 Lemmon Portfolio is a free Kirby CMS theme. Minimalistic look with focus on your content.
 Built with [Abrusco CSS](https://abrusco.com/) on top of [Kirby CMS](https://getkirby.com/).
 This template is free, customizable, mobile-first, and responsive.
