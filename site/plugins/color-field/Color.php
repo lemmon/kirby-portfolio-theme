@@ -4,10 +4,11 @@ namespace Lemmon;
 
 class Color
 {
-  private int $_r;
-  private int $_g;
-  private int $_b;
-  private ?float $_a;
+  /* PHP 7.3 compatibility */
+  private /*int*/ $_r;
+  private /*int*/ $_g;
+  private /*int*/ $_b;
+  private /*?float*/ $_a;
 
   function __construct($input)
   {
