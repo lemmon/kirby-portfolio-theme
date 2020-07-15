@@ -47,6 +47,11 @@ function twig(string $template, array $data = null)
   $twig->addGlobal('site', site());
   $twig->addGlobal('page', page());
   $twig->addGlobal('pages', pages());
-  kirby()->trigger('twig', $twig);
+  if (version_compare(\Kirby\Cms\App::version(), '3.4.0-rc.1', '<') === true) {
+    kirby()->trigger('twig', $twig);
+  } else {
+    $twig_array = (array) $twig;
+    kirby()->trigger('twig', $twig_array);
+  }
   $twig->display("pages/${template}.twig", $data ?? []);
 }
