@@ -47,6 +47,7 @@ function twig(string $template, array $data = null)
   $twig->addGlobal('site', site());
   $twig->addGlobal('page', page());
   $twig->addGlobal('pages', pages());
-  kirby()->trigger('twig', $twig);
+  /* drop hook for Kirby 3.4.0 compatibility */
+  /*kirby()->trigger('twig', $twig);*/
   $twig->display("pages/${template}.twig", $data ?? []);
 }
