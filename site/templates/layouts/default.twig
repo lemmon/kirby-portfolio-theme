@@ -91,7 +91,11 @@
     <nav class="py05 sd-p05">
       <ul class="px075 py1">
         {%~ for _page in site.pages.listed %}
-        <li class="px0125"><a class="inlineblock px0125 ul:hover {%- if _page.id == page.id %} color-highlight bg-highlight{% else %} color-link:hover{% endif %}" href="{{ _page.url }}">{{ _page.title }}</a></li>
+        <li class="px0125"><a
+          class="inlineblock px0125 ul:hover {%- if _page.id != page.id %} color-link:hover{% endif %}"
+          href="{{ _page.url }}"
+        ><span
+            {%- if _page.id == page.id %} class="color-highlight bg-highlight bg-highlight-shadow"{% endif %}>{{ _page.title }}</span></a></li>
         {%~ endfor %}
       </ul>
     </nav>

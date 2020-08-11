@@ -4022,6 +4022,12 @@ hr {
   background-color: var(--theme-highlight-background-color);
 }
 
+.bg-highlight-shadow {
+  box-shadow: -1px 0 0 2px #ffdc00, 1px 0 0 2px #ffdc00;
+  box-shadow: -1px 0 0 2px var(--theme-highlight-background-color),
+                1px 0 0 2px var(--theme-highlight-background-color);
+}
+
 :root {
   --font-family: 'Inter', sans-serif;
 }
