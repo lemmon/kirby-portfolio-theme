@@ -33,8 +33,11 @@
   --theme-highlight-text-color:       inherit;
   --theme-highlight-background-color: var(--yellow);
 
-  --background-color:                 var(--theme-background-color);
-  --text-color:                       var(--theme-text-color);
-  --link-color:                       var(--theme-link-color);
+  --base-background-color:            var(--theme-background-color);
+  --base-color:                       var(--theme-text-color);
+  --default-link-color:               var(--theme-link-color);
+
+  --copy-space-primary:               1.5em;
+  --copy-space-secondary:             0.5em;
 
 }
