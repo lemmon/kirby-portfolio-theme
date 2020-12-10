@@ -62,11 +62,11 @@
   {%~ endif %}
 
   <header>
-    <div class="py05 sd-p05">
+    <div class="py05 sd:p05">
       {%~ with { logo: site.images.filterBy('template', 'logo').first } %}
       {%~ if logo %}
       <figure class="p1"><a
-        class="block maxw ha"
+        class="block maxw100 ha"
         href="{{ kirby.url }}"
         style="width: {{ logo.width }}px;"
       ><img
@@ -82,13 +82,13 @@
       {%~ endwith %}
     </div>
     {%~ if site.description.notEmpty %}
-    <aside class="py05 sd-p05">
+    <aside class="py05 sd:p05">
       <div class="copy p1">
         {{ site.description | kt }}
       </div>
     </aside>
     {%~ endif %}
-    <nav class="py05 sd-p05">
+    <nav class="py05 sd:p05">
       <ul class="px075 py1">
         {%~ for _page in site.pages.listed %}
         <li class="px0125"><a
@@ -100,8 +100,8 @@
       </ul>
     </nav>
     {%~ if site.social.notEmpty %}
-    <aside class="py05 sd-p05">
-      <ul class="p05 row flex-wrap">
+    <aside class="py05 sd:p05">
+      <ul class="p05 row-wrap">
         {%~ for item in site.social.toStructure %}
         <li class="p05 h3 lh0"><a class="block" title="{{ item.name }}" href="{{ item.url }}"><span class="fab block" aria-hidden="true">&#x{{ item.code }};</span><span class="hide">{{ item.name }}</span></a></li>
         {%~ endfor %}
@@ -110,12 +110,12 @@
     {%~ endif %}
   </header>
 
-  <main class="main py05 sd-p05">
+  <main class="main py05 sd:p05">
     {%~ block main none %}
   </main>
 
   {%~ if site.footer.notEmpty %}
-  <footer class="py05 sd-p05">
+  <footer class="py05 sd:p05">
     <div class="p1 copy">
       {{ site.footer | kt }}
     </div>

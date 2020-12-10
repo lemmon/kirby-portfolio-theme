@@ -1,7 +1,13 @@
-@import 'abrusco';
-@import '-body';
-@import '-copy';
-@import '-color';
+@import 'abrusco/base';
+@import 'abrusco/modules';
+
+@import './body';
+@import './copy';
+
+@import 'abrusco/utils';
+@import 'abrusco/debug';
+
+@import './color';
 
 /* Inter font-family */
 
@@ -35,7 +41,7 @@
 
   --base-background-color:            var(--theme-background-color);
   --base-color:                       var(--theme-text-color);
-  --default-link-color:               var(--theme-link-color);
+  --link-color:                       var(--theme-link-color);
 
   --copy-space-primary:               1.5em;
   --copy-space-secondary:             0.5em;

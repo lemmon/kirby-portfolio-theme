@@ -8,7 +8,7 @@
 
 {% block main %}
 
-    <div class="sd-grid2 ld-grid3">
+    <div class="sd:grid2 ld:grid3">
       {%~ for _page in site.pages %}
       {%~ if _page.template == 'project' %}
       {%~ with {
@@ -18,7 +18,7 @@
         <figure>
           {%~ if _image %}
           <img
-            class="block w100 maxw"
+            class="block w100"
             {%~ if _image.extension in ['gif', 'svg'] %}
             src="{{ _image.url }}"
             {%~ else %}
