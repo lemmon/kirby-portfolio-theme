@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "kirby": true,
+    "media": true,
+    "site/accounts": true,
+    "site/cache": true,
+    "site/sessions": true,
+    "vendor": true
+  }
+}
