@@ -62,10 +62,10 @@
   {%~ endif %}
 
   <header>
-    <div class="py05 sd:p05">
+    <div class="px1 py15 sd:p15">
       {%~ with { logo: site.images.filterBy('template', 'logo').first } %}
       {%~ if logo %}
-      <figure class="p1"><a
+      <figure><a
         class="block maxw100 ha"
         href="{{ kirby.url }}"
         style="width: {{ logo.width }}px;"
@@ -77,22 +77,22 @@
         alt="{{ site.title }}"
       ></a></figure>
       {%~ else %}
-      <h1 class="p1"><a class="block h1 lh1 fw800" href="{{ kirby.url }}">{{ site.title }}</a></h1>
+      <h1><a class="block h1 lh1 fw800" href="{{ kirby.url }}">{{ site.title }}</a></h1>
       {%~ endif %}
       {%~ endwith %}
     </div>
     {%~ if site.description.notEmpty %}
-    <aside class="py05 sd:p05">
-      <div class="copy p1">
+    <aside class="px1 py15 sd:p15">
+      <div class="copy">
         {{ site.description | kt }}
       </div>
     </aside>
     {%~ endif %}
-    <nav class="py05 sd:p05">
-      <ul class="px075 py1">
+    <nav class="px1 py15 sd:p15">
+      <ul>
         {%~ for _page in site.pages.listed %}
-        <li class="px0125"><a
-          class="inlineblock px0125 ul:hover {%- if _page.id != page.id %} color-link:hover{% endif %}"
+        <li><a
+          class="inlineblock ul:hover {%- if _page.id != page.id %} color-link:hover{% endif %}"
           href="{{ _page.url }}"
         ><span
             {%- if _page.id == page.id %} class="color-highlight bg-highlight bg-highlight-shadow"{% endif %}>{{ _page.title }}</span></a></li>
@@ -100,10 +100,10 @@
       </ul>
     </nav>
     {%~ if site.social.notEmpty %}
-    <aside class="py05 sd:p05">
-      <ul class="p05 row-wrap">
+    <aside class="px05 py1 sd:p1">
+      <ul class="row-wrap">
         {%~ for item in site.social.toStructure %}
-        <li class="p05 h3 lh0"><a class="block" title="{{ item.name }}" href="{{ item.url }}"><span class="fab block" aria-hidden="true">&#x{{ item.code }};</span><span class="hide">{{ item.name }}</span></a></li>
+        <li class="h3 lh0"><a class="block p05" title="{{ item.name }}" href="{{ item.url }}"><span class="fab block" aria-hidden="true">&#x{{ item.code }};</span><span class="hide">{{ item.name }}</span></a></li>
         {%~ endfor %}
       </ul>
     </aside>
@@ -115,8 +115,8 @@
   </main>
 
   {%~ if site.footer.notEmpty %}
-  <footer class="py05 sd:p05">
-    <div class="p1 copy">
+  <footer class="px1 py15 sd:p15">
+    <div class="copy">
       {{ site.footer | kt }}
     </div>
   </footer>

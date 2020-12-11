@@ -8,9 +8,9 @@
     <div class="{% if not tp %}ld:row{% endif %}">
       <div class="span1 order9">
 
-        <div class="p025">
+        <div class="py025">
 
-          <div class="p075">
+          <div class="px1 py075">
             <h1 class="h2 {%- if not tp %} ld:h3{% endif %} lh2 fw800">{{ page.title }}</h1>
           </div>
 
@@ -22,7 +22,7 @@
           <div class="{% if tp == 'above' %}ld:row{% endif %}">
             {%~ if page.text.notEmpty %}
             <div class="span2">
-              <div class="p075 copy lh4">
+              <div class="px1 py075 copy lh4">
                 {{ page.text | kt({ width: 640, srcset: [ 320, 640, 960, 1280 ] }) }}
               </div>
             </div>
@@ -32,7 +32,7 @@
               or page.date.notEmpty
               or page.website.notEmpty %}
             <div class="span1">
-              <div class="p075 copy lh4">
+              <div class="px1 py075 copy lh4">
                 <dl>
                   {%~ if page.client.notEmpty %}
                   <dt>Client</dt>
