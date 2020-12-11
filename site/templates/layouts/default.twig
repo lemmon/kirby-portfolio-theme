@@ -52,7 +52,7 @@
   <!-- End Google Tag Manager -->
   {%~ endif %}
 </head>
-<body class="body lh4">
+<body class="body">
 
   {%~ if site.googleTagManager.notEmpty %}
   <!-- Google Tag Manager (noscript) -->
@@ -89,7 +89,7 @@
     </aside>
     {%~ endif %}
     <nav class="px1 py15 sd:p15">
-      <ul>
+      <ul class="lh4">
         {%~ for _page in site.pages.listed %}
         <li><a
           class="inlineblock ul:hover {%- if _page.id != page.id %} color-link:hover{% endif %}"
@@ -103,7 +103,7 @@
     <aside class="px05 py1 sd:p1">
       <ul class="row-wrap">
         {%~ for item in site.social.toStructure %}
-        <li class="h3 lh0"><a class="block p05" title="{{ item.name }}" href="{{ item.url }}"><span class="fab block" aria-hidden="true">&#x{{ item.code }};</span><span class="hide">{{ item.name }}</span></a></li>
+        <li><a class="block p05" title="{{ item.name }}" href="{{ item.url }}"><span class="h3 fab block" aria-hidden="true">&#x{{ item.code }};</span><span class="hide">{{ item.name }}</span></a></li>
         {%~ endfor %}
       </ul>
     </aside>
