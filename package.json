@@ -7,10 +7,6 @@
     "build:css": "abrusco src/css -o static/master.css",
     "build": "npm run build:css"
   },
-  "browserslist": [
-    "> 2%",
-    "not dead"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lemmon/kirby-portfolio-theme.git"
