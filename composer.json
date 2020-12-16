@@ -9,7 +9,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.1.0",
+        "php": ">=7.3.0",
         "getkirby/cms": "^3.0",
         "twig/twig": "^3.0"
     },
