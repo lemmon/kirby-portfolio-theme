@@ -18,12 +18,14 @@
         <figure>
           {%~ if _image %}
           <img
-            class="block w100"
+            class="block w100 ha"
+            width="272"
+            height="272"
             {%~ if _image.extension in ['gif', 'svg'] %}
             src="{{ _image.url }}"
             {%~ else %}
-            src="{{ _image.crop(288, 288).url }}"
-            srcset="{{ _image.crop(288, 288).url }} 288w,{{ _image.crop(576, 576).url }} 576w"
+            src="{{ _image.crop(272, 272).url }}"
+            srcset="{{ _image.crop(272, 272).url }} 272w,{{ _image.crop(544, 544).url }} 544w"
             {%~ endif %}
             alt="{{ _page.title }} Cover"
           >
