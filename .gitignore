@@ -1,7 +1,7 @@
 bin/deploy
 kirby
 media/*
-!media/index.html
+!media/.htaccess
 site/accounts/*
 !site/accounts/index.html
 site/cache/*

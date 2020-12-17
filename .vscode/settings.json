@@ -1,7 +1,7 @@
 {
   "files.exclude": {
     "kirby": true,
-    "media": true,
+    "media/*[!.htaccess]**": true,
     "site/accounts": true,
     "site/cache": true,
     "site/sessions": true,
