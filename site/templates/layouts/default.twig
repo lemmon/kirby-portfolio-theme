@@ -92,10 +92,10 @@
       <ul class="lh4">
         {%~ for _page in site.pages.listed %}
         <li><a
-          class="inlineblock ul:hover {%- if _page.id != page.id %} linkcolor:hover{% endif %}"
+          class="inlineblock anchor {%- if _page.id != page.id %} linkcolor:hover{% endif %}"
           href="{{ _page.url }}"
         ><span
-            {%- if _page.id == page.id %} class="color-highlight bg-highlight bg-highlight-shadow"{% endif %}>{{ _page.title }}</span></a></li>
+            class="ul:hover {%- if _page.id == page.id %} hlcolor bg-hlbgcolor bg-hlbgcolor-shadow{% endif %}">{{ _page.title }}</span></a></li>
         {%~ endfor %}
       </ul>
     </nav>
@@ -103,7 +103,7 @@
     <aside class="px05 py1 sd:p1">
       <ul class="row-wrap">
         {%~ for item in site.social.toStructure %}
-        <li><a class="block p05" title="{{ item.name }}" href="{{ item.url }}"><span class="h3 fab block" aria-hidden="true">&#x{{ item.code }};</span><span class="hide">{{ item.name }}</span></a></li>
+        <li><a class="block p05 linkcolor:hover" title="{{ item.name }}" href="{{ item.url }}"><span class="h3 fab block" aria-hidden="true">&#x{{ item.code }};</span><span class="hide">{{ item.name }}</span></a></li>
         {%~ endfor %}
       </ul>
     </aside>

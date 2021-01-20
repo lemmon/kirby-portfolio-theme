@@ -4,15 +4,15 @@
   color: var(--link-color);
 }
 
-.color-highlight {
+.hlcolor {
   color: var(--theme-highlight-text-color);
 }
 
-.bg-highlight {
+.bg-hlbgcolor {
   background-color: var(--theme-highlight-background-color);
 }
 
-.bg-highlight-shadow {
+.bg-hlbgcolor-shadow {
   box-shadow: -1px 0 0 2px var(--theme-highlight-background-color),
     1px 0 0 2px var(--theme-highlight-background-color);
 }

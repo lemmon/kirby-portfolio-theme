@@ -4563,15 +4563,15 @@ hr {
   color: var(--link-color);
 }
 
-.color-highlight {
+.hlcolor {
   color: var(--theme-highlight-text-color);
 }
 
-.bg-highlight {
+.bg-hlbgcolor {
   background-color: var(--theme-highlight-background-color);
 }
 
-.bg-highlight-shadow {
+.bg-hlbgcolor-shadow {
   box-shadow: -1px 0 0 2px var(--theme-highlight-background-color),
                 1px 0 0 2px var(--theme-highlight-background-color);
 }
@@ -4593,8 +4593,8 @@ hr {
   --theme-link-color: inherit;
   --theme-highlight-text-color: inherit;
   --theme-highlight-background-color: var(--yellow);
-  --base-background-color: var(--theme-background-color);
-  --base-color: var(--theme-text-color);
+  --default-background-color: var(--theme-background-color);
+  --default-color: var(--theme-text-color);
   --link-color: var(--theme-link-color);
   --copy-space-primary: 1.5em;
   --copy-space-secondary: .5em;
