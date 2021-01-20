@@ -6,5 +6,8 @@
     "site/cache": true,
     "site/sessions": true,
     "vendor": true
+  },
+  "search.exclude": {
+    "static": true
   }
 }
