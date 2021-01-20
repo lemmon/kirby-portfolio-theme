@@ -1,6 +1,6 @@
-.color-link,
-.color-link\:hover:hover,
-.anchor:hover .color-link\:hover {
+.linkcolor,
+.linkcolor\:hover:hover,
+.anchor:hover .linkcolor\:hover {
   color: var(--link-color);
 }
 

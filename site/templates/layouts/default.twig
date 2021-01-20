@@ -66,7 +66,7 @@
       {%~ with { logo: site.images.filterBy('template', 'logo').first } %}
       {%~ if logo %}
       <figure><a
-        class="block maxw100 ha"
+        class="block maxw ha"
         href="{{ kirby.url }}"
         style="width: {{ logo.width }}px;"
       ><img
@@ -92,7 +92,7 @@
       <ul class="lh4">
         {%~ for _page in site.pages.listed %}
         <li><a
-          class="inlineblock ul:hover {%- if _page.id != page.id %} color-link:hover{% endif %}"
+          class="inlineblock ul:hover {%- if _page.id != page.id %} linkcolor:hover{% endif %}"
           href="{{ _page.url }}"
         ><span
             {%- if _page.id == page.id %} class="color-highlight bg-highlight bg-highlight-shadow"{% endif %}>{{ _page.title }}</span></a></li>

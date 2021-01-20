@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "abrusco": "^0.14.0"
+    "abrusco": "^0.15.0"
   },
   "scripts": {
     "w": "npm run build:css -- --watch",
