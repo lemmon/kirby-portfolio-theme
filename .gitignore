@@ -7,5 +7,4 @@ site/cache/*
 site/sessions/*
 node_modules
 vendor
-composer.lock
 !**/.gitkeep

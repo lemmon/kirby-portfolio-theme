@@ -5,20 +5,28 @@
     "keywords": [
         "kirby",
         "cms",
+        "template",
         "theme"
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.3.0",
-        "getkirby/cms": "^3.0",
+        "php": ">=7.4.0 <8.2.0",
+        "getkirby/cms": "^3.6",
         "twig/twig": "^3.0"
     },
     "require-dev": {
-      "symfony/var-dumper": "^5.0"
+        "symfony/var-dumper": "^5.4"
     },
     "config": {
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "getkirby/composer-installer": true
+        }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "scripts": {
+        "start": [
+          "Composer\\Config::disableProcessTimeout",
+          "@php -S localhost:8008 kirby/router.php"
+        ]
+    }
 }

@@ -1,5 +1,6 @@
 {
   "files.exclude": {
+    "*.lock": true,
     "kirby": true,
     "media/*[!.htaccess]**": true,
     "site/accounts": true,
