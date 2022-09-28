@@ -10,9 +10,7 @@
 
 .bg-hlbgcolor {
   background-color: var(--theme-highlight-background-color);
-}
-
-.bg-hlbgcolor-shadow {
   box-shadow: -1px 0 0 2px var(--theme-highlight-background-color),
     1px 0 0 2px var(--theme-highlight-background-color);
+  box-decoration-break: clone;
 }

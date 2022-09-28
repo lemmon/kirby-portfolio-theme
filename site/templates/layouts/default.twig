@@ -95,7 +95,7 @@
           class="inlineblock anchor {%- if _page.id != page.id %} linkcolor:hover{% endif %}"
           href="{{ _page.url }}"
         ><span
-            class="ul:hover {%- if _page.id == page.id %} hlcolor bg-hlbgcolor bg-hlbgcolor-shadow{% endif %}">{{ _page.title }}</span></a></li>
+            class="ul:hover {%- if _page.id == page.id %} hlcolor bg-hlbgcolor{% endif %}">{{ _page.title }}</span></a></li>
         {%~ endfor %}
       </ul>
     </nav>
