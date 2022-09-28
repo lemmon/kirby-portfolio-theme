@@ -3,9 +3,8 @@
     "abrusco": "^0.15.0"
   },
   "scripts": {
-    "w": "npm run build:css -- --watch",
-    "build:css": "abrusco src/css -o static/master.css",
-    "build": "npm run build:css"
+    "dev": "abrusco src/css -o static/master.css --watch",
+    "build": "abrusco src/css -o static/master.css --minify"
   },
   "repository": {
     "type": "git",
