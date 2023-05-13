@@ -8,13 +8,13 @@ function twig(string $template, array $data = null)
     'debug' => option('debug'),
   ]);
   $twig->addFunction(new Twig\TwigFunction('layout', function ($name = 'default') {
-    return "layouts/${name}.twig";
+    return "layouts/{$name}.twig";
   }));
   $twig->addFunction(new Twig\TwigFunction('partial', function ($name) {
-    return "partials/${name}.twig";
+    return "partials/{$name}.twig";
   }));
   $twig->addFunction(new Twig\TwigFunction('template', function ($name) {
-    return "pages/${name}.twig";
+    return "pages/{$name}.twig";
   }));
   $twig->addFunction(new Twig\TwigFunction('dump', function (...$args) {
     return Symfony\Component\VarDumper\VarDumper::dump(...$args);
@@ -49,5 +49,5 @@ function twig(string $template, array $data = null)
   $twig->addGlobal('pages', pages());
   /* drop hook for Kirby 3.4.0 compatibility */
   /*kirby()->trigger('twig', $twig);*/
-  $twig->display("pages/${template}.twig", $data ?? []);
+  $twig->display("pages/{$template}.twig", $data ?? []);
 }
