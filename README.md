@@ -29,6 +29,14 @@ composer install
 Download the [zip archive](https://github.com/lemmon/kirby-portfolio-theme/archive/master.zip),
 extract it, and run `composer install` within the project root directory.
 
+### Pre-built release
+
+You can download latest pre-built release in the [Releases](https://github.com/lemmon/kirby-portfolio-theme/releases) section.
+
+- download the zip file
+- extract it
+- upload the contents to your web server
+
 ## Troubleshooting
 
 Sometimes you might face a folder permissions issue. Try running `bin/permissions` to resolve this.
