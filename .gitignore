@@ -8,3 +8,4 @@ site/sessions/*
 node_modules
 vendor
 !**/.gitkeep
+releases
