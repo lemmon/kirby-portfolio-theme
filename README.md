@@ -51,5 +51,5 @@ on [Kirby CMS](https://getkirby.com/) official website.
 ## More Themes
 
 - [Tablog](https://demo1.tablo.me/) — Minimalistic Blog Theme
-- [Tablook](https://github.com/basscss/basscss) — Minimalist Portfolio Theme for Artists and Visual Creators
+- [Tablook](https://demo2.tablo.me/) — Minimalist Portfolio Theme for Artists and Visual Creators
 
