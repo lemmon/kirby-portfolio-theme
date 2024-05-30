@@ -47,3 +47,9 @@ You can read more about the Kirby CMS in their official [documentation](https://
 
 This theme is released under the MIT license. For Kirby license see the [License](https://getkirby.com/license) section
 on [Kirby CMS](https://getkirby.com/) official website.
+
+## More Themes
+
+- [Tablog](https://demo1.tablo.me/) — Minimalistic Blog Theme
+- [Tablook](https://github.com/basscss/basscss) — Minimalist Portfolio Theme for Artists and Visual Creators
+
